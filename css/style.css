@@ -1,4 +1,5 @@
-@import './general.css';
 @import './properties.css';
+@import './fonts.css';
+@import './general.css';
 
 @import './blocks/container.css';

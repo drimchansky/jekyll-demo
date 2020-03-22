@@ -3,5 +3,5 @@
   margin: 0 auto;
 }
 body {
-  background: rebeccapurple;
+  font-family: var(--f-main);
 }
