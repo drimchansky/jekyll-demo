@@ -86,14 +86,27 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./js/components/hamburger.js":
+/*!************************************!*\
+  !*** ./js/components/hamburger.js ***!
+  \************************************/
+/*! exports provided: hamburger */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"hamburger\", function() { return hamburger; });\nvar hamburger = function hamburger() {\n  console.log('hamburger');\n};\n\n\n\n//# sourceURL=webpack:///./js/components/hamburger.js?");
+
+/***/ }),
+
 /***/ "./js/scripts.js":
 /*!***********************!*\
   !*** ./js/scripts.js ***!
   \***********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("console.log('hello');\n\n//# sourceURL=webpack:///./js/scripts.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_hamburger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/hamburger */ \"./js/components/hamburger.js\");\n\nObject(_components_hamburger__WEBPACK_IMPORTED_MODULE_0__[\"hamburger\"])();\n\n//# sourceURL=webpack:///./js/scripts.js?");
 
 /***/ })
 

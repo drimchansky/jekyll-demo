@@ -3,35 +3,27 @@ var gulp = require('gulp'),
   webpack = require('webpack'),
   browserSync = require('browser-sync').create(),
   postcss = require('gulp-postcss'),
-  rgba = require('postcss-hexrgba'),
   autoprefixer = require('autoprefixer'),
-  cssvars = require('postcss-simple-vars'),
   nested = require('postcss-nested'),
   cssImport = require('postcss-import'),
-  postcssCustomProperties = require('postcss-custom-properties'),
-  mixins = require('postcss-mixins'),
-  colorFunctions = require('postcss-color-function');
+  postcssCustomProperties = require('postcss-custom-properties');
 
 gulp.task('styles', function() {
   return gulp
-    .src(settings.themeLocation + 'css/style.css')
+    .src(settings.projectRoot + 'css/style.css')
     .pipe(
       postcss([
         cssImport,
-        mixins,
-        cssvars,
         nested,
         postcssCustomProperties({
           preserve: true,
           importFrom: './css/properties.css',
         }),
-        rgba,
-        colorFunctions,
         autoprefixer,
       ]),
     )
     .on('error', error => console.log(error.toString()))
-    .pipe(gulp.dest(settings.themeLocation));
+    .pipe(gulp.dest(settings.projectRoot));
 });
 
 gulp.task('scripts', function(callback) {
@@ -52,17 +44,14 @@ gulp.task('watch', function() {
     ghostMode: false,
   });
 
-  gulp.watch('./**/*.php', function() {
-    browserSync.reload();
-  });
   gulp.watch(
-    settings.themeLocation + 'css/**/*.css',
+    settings.projectRoot + 'css/**/*.css',
     gulp.parallel('waitForStyles'),
   );
   gulp.watch(
     [
-      settings.themeLocation + 'js/modules/*.js',
-      settings.themeLocation + 'js/scripts.js',
+      settings.projectRoot + 'js/modules/*.js',
+      settings.projectRoot + 'js/scripts.js',
     ],
     gulp.parallel('waitForScripts'),
   );
@@ -72,7 +61,7 @@ gulp.task(
   'waitForStyles',
   gulp.series('styles', function() {
     return gulp
-      .src(settings.themeLocation + 'style.css')
+      .src(settings.projectRoot + 'style.css')
       .pipe(browserSync.stream());
   }),
 );

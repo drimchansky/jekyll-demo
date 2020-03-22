@@ -1,1 +1,3 @@
-console.log('hello');
+import { hamburger } from './components/hamburger';
+
+hamburger();

@@ -1,2 +1,2 @@
-exports.themeLocation = './';
-exports.urlToPreview = 'http://localhost:4000/';
+exports.projectRoot = './';
+exports.urlToPreview = 'http://localhost:4000';

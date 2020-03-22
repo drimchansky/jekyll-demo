@@ -1,13 +1,13 @@
 const path = require('path'),
-settings = require('./settings');
+  settings = require('./settings');
 
 module.exports = {
   entry: {
-    App: settings.themeLocation + "js/scripts.js"
+    App: settings.projectRoot + 'js/scripts.js',
   },
   output: {
-    path: path.resolve(__dirname, settings.themeLocation + "js"),
-    filename: "scripts-bundled.js"
+    path: path.resolve(__dirname, settings.projectRoot + 'js'),
+    filename: 'scripts-bundled.js',
   },
   module: {
     rules: [
@@ -17,11 +17,11 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env']
-          }
-        }
-      }
-    ]
+            presets: ['@babel/preset-env'],
+          },
+        },
+      },
+    ],
   },
-  mode: 'development'
-}
+  mode: 'development',
+};

@@ -9,6 +9,7 @@
     "prettier/prettier": ["error"],
     "linebreak-style": 0,
     "no-console": "off",
-    "indent": ["error", 2]
+    "indent": ["error", 2],
+    "import/prefer-default-export": "off"
   }
 }

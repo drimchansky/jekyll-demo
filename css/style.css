@@ -1,3 +1,4 @@
-body {
-  background: blue;
-}
+@import './general.css';
+@import './properties.css';
+
+@import './blocks/container.css';
