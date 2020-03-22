@@ -1,1 +1,8 @@
 name: 'Diopside'
+
+contentful:
+  spaces:
+    - diopside:
+        access_token: GDb-tqxcisLaWXMGjycAqWlGq3m-To_4rEevZ__Ttq0
+        space: r9imu57zv44r
+        environment: master
