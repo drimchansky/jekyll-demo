@@ -313,12 +313,17 @@ template {
     U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
     U+FEFF, U+FFFD;
 }
+html {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
 body {
+  height: 100%;
   font-family: Ubuntu
 ,
 sans-serif;
   font-family: var(--f-main);
-  overflow-x: hidden;
 }
 body.is-open {
   overflow: hidden;
@@ -333,17 +338,19 @@ body.is-open {
   max-width: 1100px;
 }
 .front-screen {
+  height: calc(1vh * 100);
+  height: calc(var(--vh, 1vh) * 100);
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   font-size: 16px;
-  padding-bottom: 5em;
   color: #1f3f68;
   color: var(--c-regular);
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: 200px;
+  overflow-x: hidden;
 }
 @media screen and (min-width: 576px) {
 .front-screen {

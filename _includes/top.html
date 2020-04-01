@@ -6,6 +6,16 @@
   <meta charset="utf-8">
   <title>{{ page.title }} ∙ {{ site.name }}</title>
 
+  <script>
+    document.documentElement.classList.remove('no-js');
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+    window.addEventListener('resize', () => {
+      vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    });
+  </script>
+
   <link rel="preconnect" href="http://images.ctfassets.net" />
   <link rel="stylesheet" href="{{ "/bundled/style.css" | relative_url }}">
   <link rel="icon" href="/assets/favicon.ico">
