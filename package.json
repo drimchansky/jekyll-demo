@@ -8,7 +8,7 @@
     "lint": "node -e console.clear() && stylelint ./css/**/*.css",
     "lint-fix": "node -e console.clear() && stylelint ./css/**/*.css --fix",
     "dev": "concurrently \"gulp watch\" \"bundle exec jekyll serve\"",
-    "content": "bundle exec jekyll contentful --rebuild"
+    "build": "bundle exec jekyll contentful --rebuild"
   },
   "author": "",
   "license": "ISC",
