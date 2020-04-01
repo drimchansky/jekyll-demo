@@ -3,7 +3,7 @@
   font-size: 16px;
   align-items: center;
   text-decoration: none;
-  padding: 0.5em;
+  padding: 1.3em;
 
   @media (min-width: 768px) {
     font-size: 18px;
@@ -19,7 +19,7 @@
 }
 
 .logo__title {
-  font-size: 1.2em;
+  font-size: 1.25em;
   margin-left: 5px;
   color: var(--c-regular);
   font-weight: bold;

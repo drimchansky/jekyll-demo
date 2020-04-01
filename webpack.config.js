@@ -6,7 +6,7 @@ module.exports = {
     App: settings.projectRoot + 'js/scripts.js',
   },
   output: {
-    path: path.resolve(__dirname, settings.projectRoot + 'js'),
+    path: path.resolve(__dirname, settings.projectRoot + 'bundled'),
     filename: 'scripts-bundled.js',
   },
   module: {

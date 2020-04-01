@@ -4,26 +4,34 @@ var gulp = require('gulp'),
   browserSync = require('browser-sync').create(),
   postcss = require('gulp-postcss'),
   autoprefixer = require('autoprefixer'),
+  sourcemaps = require('gulp-sourcemaps'),
   nested = require('postcss-nested'),
   cssImport = require('postcss-import'),
-  postcssCustomProperties = require('postcss-custom-properties');
+  cleanCSS = require('gulp-clean-css'),
+  postcssCustomProperties = require('postcss-custom-properties'),
+  rename = require('gulp-rename');
 
 gulp.task('styles', function() {
-  return gulp
-    .src(settings.projectRoot + 'css/style.css')
-    .pipe(
-      postcss([
-        cssImport,
-        nested,
-        postcssCustomProperties({
-          preserve: true,
-          importFrom: './css/properties.css',
-        }),
-        autoprefixer,
-      ]),
-    )
-    .on('error', error => console.log(error.toString()))
-    .pipe(gulp.dest(settings.projectRoot));
+  return (
+    gulp
+      .src(settings.projectRoot + 'css/style.css')
+      .pipe(
+        postcss([
+          cssImport,
+          nested,
+          postcssCustomProperties({
+            preserve: true,
+            importFrom: './css/properties.css',
+          }),
+          autoprefixer,
+        ]),
+      )
+      // .pipe(sourcemaps.init())
+      // .pipe(cleanCSS())
+      // .pipe(sourcemaps.write())
+      .on('error', error => console.log(error.toString()))
+      .pipe(gulp.dest(settings.projectRoot + '/bundled/'))
+  );
 });
 
 gulp.task('scripts', function(callback) {
@@ -61,7 +69,7 @@ gulp.task(
   'waitForStyles',
   gulp.series('styles', function() {
     return gulp
-      .src(settings.projectRoot + 'style.css')
+      .src(settings.projectRoot + '/bundled/style.css', { allowEmpty: true })
       .pipe(browserSync.stream());
   }),
 );
