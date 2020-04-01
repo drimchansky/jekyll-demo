@@ -1,0 +1,16 @@
+.nav {
+}
+
+.nav__list {
+  display: flex;
+}
+
+.nav__item {
+  &_active {
+    background: red;
+  }
+}
+
+.nav__link {
+  text-decoration: none;
+}
