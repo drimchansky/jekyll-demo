@@ -4,7 +4,9 @@
 @import './general.css';
 
 @import './blocks/container.css';
+@import './blocks/front-screen.css';
 @import './blocks/header.css';
 @import './blocks/nav.css';
 @import './blocks/logo.css';
 @import './blocks/hamburger.css';
+@import './blocks/button.css';
