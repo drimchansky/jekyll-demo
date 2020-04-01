@@ -21,6 +21,8 @@
     position: relative;
     display: block;
     visibility: visible;
+    background: transparent;
+    font-size: 18px;
   }
 }
 
@@ -31,6 +33,11 @@
   justify-content: center;
   height: 100%;
   padding: 0;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
 }
 
 .nav__item {
@@ -41,4 +48,9 @@
   padding: 1.8em;
   text-decoration: none;
   display: block;
+  color: var(--c-regular);
+
+  @media (min-width: 768px) {
+    padding: 0.5em 0.8em;
+  }
 }
