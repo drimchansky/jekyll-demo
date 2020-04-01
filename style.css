@@ -325,6 +325,9 @@ body {
 sans-serif;
   font-family: var(--f-main);
 }
+body.is-open {
+  overflow: hidden;
+}
 .container {
   max-width: 1300px;
   margin: 0 auto;
@@ -335,15 +338,45 @@ sans-serif;
   padding: 1em 0;
 }
 .nav {
+  display: none;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+  background: #1f3f68;
+  background: var(--c-regular);
 }
+.nav_visible {
+    display: block;
+    visibility: visible;
+  }
+.nav_visible .nav__link {
+      color: white;
+    }
+@media (min-width: 768px) {
+.nav {
+    position: relative;
+    display: block;
+    visibility: visible
+}
+  }
 .nav__list {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0;
 }
-.nav__item_active {
-    background: red;
-  }
+.nav__item {
+  list-style-type: none;
+}
 .nav__link {
+  padding: 1.8em;
   text-decoration: none;
+  display: block;
 }
 .logo {
   display: flex;
@@ -365,4 +398,105 @@ sans-serif;
   color: #1f3f68;
   color: var(--c-regular);
   font-weight: bold;
+}
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+.hamburger {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, -webkit-filter;
+  transition-property: opacity, filter;
+  transition-property: opacity, filter, -webkit-filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+@media (min-width: 768px) {
+.hamburger {
+    display: none;
+    visibility: hidden
+}
+  }
+.hamburger:hover {
+  opacity: 0.7;
+}
+.hamburger.is-active:hover {
+  opacity: 0.7;
+}
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: #1f3f68;
+  background-color: var(--c-regular);
+}
+.hamburger-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  width: 40px;
+  height: 4px;
+  background-color: #1f3f68;
+  background-color: var(--c-regular);
+  border-radius: 4px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+body.is-open .hamburger-inner {
+  background-color: white !important;
+}
+body.is-open .hamburger-inner::before {
+  background-color: white !important;
+}
+body.is-open .hamburger-inner::after {
+  background-color: white !important;
+}
+.hamburger-inner::before,
+.hamburger-inner::after {
+  content: '';
+  display: block;
+}
+.hamburger-inner::before {
+  top: -10px;
+}
+.hamburger-inner::after {
+  bottom: -10px;
+}
+/*
+   * Arrow Turn
+   */
+.hamburger--arrowturn.is-active .hamburger-inner {
+  transform: rotate(-180deg);
+}
+.hamburger--arrowturn.is-active .hamburger-inner::before {
+  transform: translate3d(8px, 0, 0) rotate(45deg) scale(0.7, 1);
+}
+.hamburger--arrowturn.is-active .hamburger-inner::after {
+  transform: translate3d(8px, 0, 0) rotate(-45deg) scale(0.7, 1);
 }

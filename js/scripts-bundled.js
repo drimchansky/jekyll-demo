@@ -90,11 +90,10 @@
 /*!************************************!*\
   !*** ./js/components/hamburger.js ***!
   \************************************/
-/*! exports provided: hamburger */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"hamburger\", function() { return hamburger; });\nvar hamburger = function hamburger() {\n  console.log('hamburger');\n};\n\n\n\n//# sourceURL=webpack:///./js/components/hamburger.js?");
+eval("(function () {\n  var hamburger = document.querySelector('.hamburger');\n  var nav = document.querySelector('.nav');\n  var body = document.getElementsByTagName('body')[0];\n  hamburger.addEventListener('click', function () {\n    hamburger.classList.toggle('is-active');\n    nav.classList.toggle('nav_visible');\n    body.classList.toggle('is-open');\n  });\n})();\n\n//# sourceURL=webpack:///./js/components/hamburger.js?");
 
 /***/ }),
 
@@ -106,7 +105,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_hamburger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/hamburger */ \"./js/components/hamburger.js\");\n\nObject(_components_hamburger__WEBPACK_IMPORTED_MODULE_0__[\"hamburger\"])();\n\n//# sourceURL=webpack:///./js/scripts.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_hamburger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/hamburger */ \"./js/components/hamburger.js\");\n/* harmony import */ var _components_hamburger__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_components_hamburger__WEBPACK_IMPORTED_MODULE_0__);\n\n\n//# sourceURL=webpack:///./js/scripts.js?");
 
 /***/ })
 

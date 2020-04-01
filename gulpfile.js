@@ -50,7 +50,7 @@ gulp.task('watch', function() {
   );
   gulp.watch(
     [
-      settings.projectRoot + 'js/modules/*.js',
+      settings.projectRoot + 'js/components/*.js',
       settings.projectRoot + 'js/scripts.js',
     ],
     gulp.parallel('waitForScripts'),
