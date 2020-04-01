@@ -1,5 +1,6 @@
-const path = require('path'),
-  settings = require('./settings');
+const path = require('path');
+const MinifyPlugin = require('babel-minify-webpack-plugin');
+const settings = require('./settings');
 
 module.exports = {
   entry: {
@@ -9,6 +10,7 @@ module.exports = {
     path: path.resolve(__dirname, settings.projectRoot + 'bundled'),
     filename: 'scripts-bundled.js',
   },
+  plugins: [new MinifyPlugin()],
   module: {
     rules: [
       {
