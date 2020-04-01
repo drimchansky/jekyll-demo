@@ -1,0 +1,20 @@
+.logo {
+  display: flex;
+  font-size: 16px;
+  align-items: center;
+}
+
+.logo__image {
+  height: 30px;
+  width: 30px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+.logo__title {
+  font-size: 1.2em;
+  margin-left: 5px;
+  color: var(--c-regular);
+  font-weight: bold;
+}

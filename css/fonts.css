@@ -3,6 +3,7 @@
   font-family: 'Ubuntu';
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src: url('../fonts/ubuntu-v14-cyrillic_latin-regular.eot');
   src: url('../fonts/ubuntu-v14-cyrillic_latin-regular.eot?#iefix')
       format('embedded-opentype'),
@@ -21,6 +22,7 @@
   font-family: 'Ubuntu';
   font-style: normal;
   font-weight: 700;
+  font-display: swap;
   src: url('../fonts/ubuntu-v14-cyrillic_latin-700.eot');
   src: url('../fonts/ubuntu-v14-cyrillic_latin-700.eot?#iefix')
       format('embedded-opentype'),

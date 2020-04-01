@@ -1,11 +1,13 @@
 :root {
   --f-main: Ubuntu, sans-serif;
+  --c-regular: #1f3f68;
 }
 /* ubuntu-regular - cyrillic_latin */
 @font-face {
   font-family: 'Ubuntu';
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src: url('../fonts/ubuntu-v14-cyrillic_latin-regular.eot');
   src: url('../fonts/ubuntu-v14-cyrillic_latin-regular.eot?#iefix')
       format('embedded-opentype'),
@@ -23,6 +25,7 @@
   font-family: 'Ubuntu';
   font-style: normal;
   font-weight: 700;
+  font-display: swap;
   src: url('../fonts/ubuntu-v14-cyrillic_latin-700.eot');
   src: url('../fonts/ubuntu-v14-cyrillic_latin-700.eot?#iefix')
       format('embedded-opentype'),
@@ -34,13 +37,37 @@
     url('../fonts/ubuntu-v14-cyrillic_latin-700.svg#Ubuntu')
       format('svg');
 }
-.container {
-  max-width: 1300px;
-  margin: 0 auto;
-}
 body {
   font-family: Ubuntu
 ,
 sans-serif;
   font-family: var(--f-main);
+}
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.header {
+  display: flex;
+  font-size: 16px;
+  padding: 1em 0;
+}
+.logo {
+  display: flex;
+  font-size: 16px;
+  align-items: center;
+}
+.logo__image {
+  height: 30px;
+  width: 30px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+.logo__title {
+  font-size: 1.2em;
+  margin-left: 5px;
+  color: #1f3f68;
+  color: var(--c-regular);
+  font-weight: bold;
 }

@@ -3,3 +3,5 @@
 @import './general.css';
 
 @import './blocks/container.css';
+@import './blocks/header.css';
+@import './blocks/logo.css';
