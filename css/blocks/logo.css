@@ -2,6 +2,8 @@
   display: flex;
   font-size: 16px;
   align-items: center;
+  text-decoration: none;
+  padding: 0.5em;
 }
 
 .logo__image {
