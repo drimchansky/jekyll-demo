@@ -2,7 +2,6 @@
 @import '../node_modules/normalize.css/normalize.css';
 @import './fonts.css';
 @import './general.css';
-
 @import './blocks/container.css';
 @import './blocks/front-screen.css';
 @import './blocks/header.css';

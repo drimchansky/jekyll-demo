@@ -1,21 +1,22 @@
 .button {
+  display: inline-block;
+  padding: 0.8em 1.6em;
   font-size: 16px;
   font-size: 1.2em;
-  display: inline-block;
+  color: white;
+  text-decoration: none;
+  background: var(--c-light);
+  border-radius: 10px;
   box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
   transition: box-shadow 0.2s;
-  padding: 0.8em 1.6em;
-  background: var(--c-light);
-  text-decoration: none;
-  color: white;
-  border-radius: 10px;
 
   &:hover {
     box-shadow: 5px 5px 10px rgba(53, 110, 173, 0.1);
   }
+
   &:focus {
-    outline-offset: 2px;
     outline-color: black;
+    outline-offset: 2px;
   }
 }
 

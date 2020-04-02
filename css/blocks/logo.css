@@ -1,9 +1,9 @@
 .logo {
   display: flex;
-  font-size: 16px;
   align-items: center;
-  text-decoration: none;
   padding: 1.3em;
+  font-size: 16px;
+  text-decoration: none;
 
   @media (min-width: 768px) {
     font-size: 18px;
@@ -11,16 +11,16 @@
 }
 
 .logo__image {
-  height: 30px;
   width: 30px;
+  height: 30px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
 }
 
 .logo__title {
-  font-size: 1.25em;
   margin-left: 5px;
-  color: var(--c-regular);
+  font-size: 1.25em;
   font-weight: bold;
+  color: var(--c-regular);
 }

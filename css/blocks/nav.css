@@ -1,13 +1,13 @@
 .nav {
-  display: none;
-  visibility: hidden;
   position: absolute;
   top: 0;
-  height: 100%;
-  width: 100%;
-  font-size: 16px;
-  background: var(--c-regular);
   z-index: 10;
+  display: none;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  visibility: hidden;
+  background: var(--c-regular);
 
   &_visible {
     display: block;
@@ -21,21 +21,21 @@
   @media (min-width: 768px) {
     position: relative;
     display: block;
+    font-size: 18px;
     visibility: visible;
     background: transparent;
-    font-size: 18px;
   }
 }
 
 .nav__list {
+  top: 0;
+  left: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
   width: 100%;
-  left: 0;
-  top: 0;
+  height: 100%;
   padding: 0;
   margin: 0;
 
@@ -50,10 +50,10 @@
 }
 
 .nav__link {
-  padding: 1.8em;
-  text-decoration: none;
   display: block;
+  padding: 1.8em;
   color: var(--c-regular);
+  text-decoration: none;
 
   @media (min-width: 768px) {
     padding: 0.5em 0.8em;
