@@ -314,8 +314,8 @@ template {
     U+FEFF, U+FFFD;
 }
 html {
-  height: 100%;
   width: 100%;
+  height: 100%;
   overflow-x: hidden;
 }
 body {
@@ -331,26 +331,26 @@ body.is-open {
 .container {
   width: 100%;
   max-width: 1300px;
-  margin: 0 auto;
   padding: 0 10px;
+  margin: 0 auto;
 }
 .container_front-page {
   max-width: 1100px;
 }
 .front-screen {
-  height: calc(1vh * 100);
-  height: calc(var(--vh, 1vh) * 100);
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  height: calc(1vh * 100);
+  height: calc(var(--vh, 1vh) * 100);
+  overflow-x: hidden;
   font-size: 16px;
   color: #1f3f68;
   color: var(--c-regular);
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: 200px;
-  overflow-x: hidden;
 }
 @media screen and (min-width: 576px) {
 .front-screen {
@@ -359,9 +359,9 @@ body.is-open {
   }
 @media screen and (min-width: 768px) {
 .front-screen {
-    font-size: 20px;
     height: 100vh;
-    padding-bottom: 0
+    padding-bottom: 0;
+    font-size: 20px
 }
   }
 @media screen and (min-width: 998px) {
@@ -370,40 +370,40 @@ body.is-open {
 }
   }
 @media screen and (min-width: 998px) {
-    .front-screen:before {
-      content: '';
+    .front-screen::before {
       position: absolute;
-      left: 0;
       top: 0;
-      height: 100%;
+      left: 0;
+      z-index: -1;
       width: 100%;
+      height: 100%;
+      content: '';
       background: linear-gradient(
         0deg,
         rgba(145, 145, 145, 0.5) 8.84%,
         rgba(152, 195, 232, 0) 31.12%
       );
-      z-index: -1;
     }
   }
 .front-screen h1 {
-  font-size: 2em;
   margin-top: 4em;
+  font-size: 2em;
 }
 @media screen and (min-width: 998px) {
 .front-screen h1 {
-    font-size: 3em;
+    max-width: 65%;
     margin-top: 2em;
-    max-width: 65%
+    font-size: 3em
 }
   }
 .front-screen p {
-  opacity: 0.8;
   font-size: 1em;
+  opacity: 0.8;
 }
 .header {
-  width: 100%;
   display: flex;
   align-items: center;
+  width: 100%;
   font-size: 16px;
 }
 @media (min-width: 768px) {
@@ -413,16 +413,16 @@ body.is-open {
 }
   }
 .nav {
-  display: none;
-  visibility: hidden;
   position: absolute;
   top: 0;
-  height: 100%;
+  z-index: 10;
+  display: none;
   width: 100%;
+  height: 100%;
   font-size: 16px;
+  visibility: hidden;
   background: #1f3f68;
   background: var(--c-regular);
-  z-index: 10;
 }
 .nav_visible {
     display: block;
@@ -435,20 +435,20 @@ body.is-open {
 .nav {
     position: relative;
     display: block;
+    font-size: 18px;
     visibility: visible;
-    background: transparent;
-    font-size: 18px
+    background: transparent
 }
   }
 .nav__list {
+  top: 0;
+  left: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
   width: 100%;
-  left: 0;
-  top: 0;
+  height: 100%;
   padding: 0;
   margin: 0;
 }
@@ -462,11 +462,11 @@ body.is-open {
   list-style-type: none;
 }
 .nav__link {
-  padding: 1.8em;
-  text-decoration: none;
   display: block;
+  padding: 1.8em;
   color: #1f3f68;
   color: var(--c-regular);
+  text-decoration: none;
 }
 @media (min-width: 768px) {
 .nav__link {
@@ -475,10 +475,10 @@ body.is-open {
   }
 .logo {
   display: flex;
-  font-size: 16px;
   align-items: center;
-  text-decoration: none;
   padding: 1.3em;
+  font-size: 16px;
+  text-decoration: none;
 }
 @media (min-width: 768px) {
 .logo {
@@ -486,18 +486,18 @@ body.is-open {
 }
   }
 .logo__image {
-  height: 30px;
   width: 30px;
+  height: 30px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
 }
 .logo__title {
-  font-size: 1.25em;
   margin-left: 5px;
+  font-size: 1.25em;
+  font-weight: bold;
   color: #1f3f68;
   color: var(--c-regular);
-  font-weight: bold;
 }
 /*!
  * Hamburgers
@@ -508,24 +508,24 @@ body.is-open {
  */
 .hamburger {
   position: absolute;
-  right: 10px;
   top: 10px;
-  padding: 15px 15px;
+  right: 10px;
+  z-index: 11;
   display: inline-block;
-  cursor: pointer;
-  transition-property: opacity, -webkit-filter;
-  transition-property: opacity, filter;
-  transition-property: opacity, filter, -webkit-filter;
-  transition-duration: 0.15s;
-  transition-timing-function: linear;
+  padding: 15px 15px;
+  margin: 0;
+  overflow: visible;
   font: inherit;
   color: inherit;
   text-transform: none;
+  cursor: pointer;
   background-color: transparent;
   border: 0;
-  margin: 0;
-  overflow: visible;
-  z-index: 11;
+  transition-timing-function: linear;
+  transition-duration: 0.15s;
+  transition-property: opacity, -webkit-filter;
+  transition-property: opacity, filter;
+  transition-property: opacity, filter, -webkit-filter;
 }
 @media (min-width: 768px) {
 .hamburger {
@@ -546,28 +546,28 @@ body.is-open {
   background-color: var(--c-regular);
 }
 .hamburger-box {
+  position: relative;
+  display: inline-block;
   width: 40px;
   height: 24px;
-  display: inline-block;
-  position: relative;
 }
 .hamburger-inner {
-  display: block;
   top: 50%;
+  display: block;
   margin-top: -2px;
 }
 .hamburger-inner,
 .hamburger-inner::before,
 .hamburger-inner::after {
+  position: absolute;
   width: 40px;
   height: 4px;
   background-color: #1f3f68;
   background-color: var(--c-regular);
   border-radius: 4px;
-  position: absolute;
-  transition-property: transform;
-  transition-duration: 0.15s;
   transition-timing-function: ease;
+  transition-duration: 0.15s;
+  transition-property: transform;
 }
 body.is-open .hamburger-inner {
   background-color: white !important;
@@ -580,8 +580,8 @@ body.is-open .hamburger-inner::after {
 }
 .hamburger-inner::before,
 .hamburger-inner::after {
-  content: '';
   display: block;
+  content: '';
 }
 .hamburger-inner::before {
   top: -10px;
@@ -602,25 +602,46 @@ body.is-open .hamburger-inner::after {
   transform: translate3d(8px, 0, 0) rotate(-45deg) scale(0.7, 1);
 }
 .button {
+  display: inline-block;
+  padding: 0.8em 1.6em;
   font-size: 16px;
   font-size: 1.2em;
-  display: inline-block;
-  box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
-  transition: box-shadow 0.2s;
-  padding: 0.8em 1.6em;
+  color: white;
+  text-decoration: none;
   background: #5a98d0;
   background: var(--c-light);
-  text-decoration: none;
-  color: white;
   border-radius: 10px;
+  box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+  transition: box-shadow 0.2s;
 }
 .button:hover {
     box-shadow: 5px 5px 10px rgba(53, 110, 173, 0.1);
   }
 .button:focus {
-    outline-offset: 2px;
     outline-color: black;
+    outline-offset: 2px;
   }
 .button_front-page {
   margin-top: 50px;
 }
+.banner {
+  background: url(../../assets//banner.svg) no-repeat;
+  background-size: cover;
+  font-size: 16px;
+}
+@media (min-width: 768px) {
+.banner {
+    font-size: 18px
+}
+  }
+@media (min-width: 992px) {
+.banner {
+    font-size: 20px
+}
+  }
+.banner h1 {
+    font-size: 2em;
+    padding: 1em 0;
+    margin: 0;
+    color: white;
+  }
