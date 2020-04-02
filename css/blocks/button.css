@@ -21,5 +21,9 @@
 }
 
 .button_front-page {
-  margin-top: 50px;
+  margin-top: 10px;
+
+  @media (min-width: 370px) {
+    margin-top: 40px;
+  }
 }
