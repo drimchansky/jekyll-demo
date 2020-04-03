@@ -1,5 +1,4 @@
 name: 'Diopside'
-logo_image: assets/img/diamond.png
 
 defaults:
   - scope:
