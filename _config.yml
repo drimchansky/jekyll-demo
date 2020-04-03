@@ -1,7 +1,13 @@
 name: 'Diopside'
+collections_dir: _data/
+
+collections:
+  features:
+    output: true
+    permalink: /:collection/:name
 
 defaults:
   - scope:
-      path: 'assets/img'
+      type: features
     values:
-      image: true
+      layout: default
