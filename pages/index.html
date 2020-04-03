@@ -4,16 +4,14 @@ permalink: /
 title: Home
 ---
 
-<div class="front-screen"
-  style="background-image: url({{site.data.contentful.spaces.diopside.general[0].bgimage.url}});">
+<div class="front-screen" style="background-image: url(assets/hugo-car-rental.png);">
 
   {% include header.html %}
 
   <div class="container container_front-page">
-    <h1>{{site.data.contentful.spaces.diopside.general[0].welcome_title}}</h1>
-    <p>{{site.data.contentful.spaces.diopside.general[0].welcome_subtitle}}</p>
+    <h1>{{site.data.frontPage.frontCaption}}</h1>
+    <p>{{site.data.frontPage.frontSubcaption}}</p>
     <a class="button button_front-page" href="/projects">Наши проекты</a>
   </div>
-
 
 </div>

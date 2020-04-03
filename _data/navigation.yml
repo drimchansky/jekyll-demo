@@ -1,0 +1,11 @@
+- name: Главная
+  url: /
+
+- name: Проекты
+  url: /projects
+
+- name: Блог
+  url: /blog
+
+- name: Контакты
+  url: /contacts

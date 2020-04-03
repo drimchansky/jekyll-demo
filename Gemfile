@@ -18,9 +18,7 @@ gem "minima", "~> 2.0"
 # gem "github-pages", group: :jekyll_plugins
 
 # If you have any plugins, put them here!
-group :jekyll_plugins do
-  gem "jekyll-contentful-data-import"
-end
+
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.
