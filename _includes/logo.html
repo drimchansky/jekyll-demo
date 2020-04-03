@@ -1,10 +1,8 @@
 <a href="/" class="logo">
 
-  {% for image in site.static_files %}
-  {% if image.path contains 'img/diamond' %}
-  <div class="logo__image" style="background-image: url({{site.baseurl}}{{image.path}});"></div>
-  {% endif %}
-  {% endfor %}
+
+  <div class="logo__image" style="background-image: url({{site.logo_image}});"></div>
+
 
   <span class="logo__title">{{ site.name }}{{page.boo}}</span>
 </a>
