@@ -2,6 +2,9 @@
 layout: front
 permalink: /
 title: Home
+caption: 'Новый инструмент автоматизации'
+subcaption: 'Какой-то текст, описывающий преимущества нашего продукта'
+buttonText: 'Наши проекты'
 ---
 
 <div class="front-screen" style="background-image: url(assets/hugo-car-rental.png);">
@@ -9,9 +12,9 @@ title: Home
   {% include header.html %}
 
   <div class="container container_front-page">
-    <h1>{{site.data.frontPage.frontCaption}}</h1>
-    <p>{{site.data.frontPage.frontSubcaption}}</p>
-    <a class="button button_front-page" href="/projects">Наши проекты</a>
+    <h1>{{page.caption}}</h1>
+    <p>{{page.subcaption}}</p>
+    <a class="button button_front-page" href="/projects">{{page.buttonText}}</a>
   </div>
 
 </div>
