@@ -1,5 +1,4 @@
 :root {
-  --f-head: 'Russo One', sans-serif;
   --f-main: 'Roboto Slab', serif;
   --c-regular: #1f3f68;
   --c-light: #5a98d0;
@@ -484,12 +483,21 @@ body.is-open {
   color: #1f3f68;
   color: var(--c-regular);
   text-decoration: none;
+  transition: color 0.2s;
 }
+.nav__link:hover {
+    color: #5a98d0;
+    color: var(--c-light);
+  }
 @media (min-width: 768px) {
 .nav__link {
     padding: 0.5em 0.8em
 }
   }
+.nav__link_current {
+  color: #5a98d0;
+  color: var(--c-light);
+}
 .logo {
   display: flex;
   align-items: center;

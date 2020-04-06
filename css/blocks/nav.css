@@ -54,8 +54,17 @@
   padding: 1.8em;
   color: var(--c-regular);
   text-decoration: none;
+  transition: color 0.2s;
+
+  &:hover {
+    color: var(--c-light);
+  }
 
   @media (min-width: 768px) {
     padding: 0.5em 0.8em;
   }
+}
+
+.nav__link_current {
+  color: var(--c-light);
 }
