@@ -50,8 +50,8 @@
 }
 
 .front-screen h1 {
-  font-family: var(--f-head);
   font-size: 2em;
+  font-weight: bold;
 
   @media screen and (min-width: 768px) {
     font-size: 3em;
@@ -62,7 +62,6 @@
 }
 
 .front-screen p {
-  font-family: var(--f-head);
   font-size: 1em;
   color: var(--c-regular);
   font-weight: bold;

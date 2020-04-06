@@ -4,25 +4,25 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('../fonts/lora-v15-cyrillic_latin-regular.eot');
-  src: url('../fonts/lora-v15-cyrillic_latin-regular.eot?#iefix')
+  src: url('../fonts/montserrat-v14-cyrillic_latin-regular.eot');
+  src: url('../fonts/montserrat-v14-cyrillic_latin-regular.eot?#iefix')
       format('embedded-opentype'),
-    url('../fonts/lora-v15-cyrillic_latin-regular.woff2') format('woff2'),
-    url('../fonts/lora-v15-cyrillic_latin-regular.woff') format('woff'),
-    url('../fonts/lora-v15-cyrillic_latin-regular.ttf') format('truetype'),
-    url('../fonts/lora-v15-cyrillic_latin-regular.svg#Ubuntu') format('svg');
+    url('../fonts/montserrat-v14-cyrillic_latin-regular.woff2') format('woff2'),
+    url('../fonts/montserrat-v14-cyrillic_latin-regular.woff') format('woff'),
+    url('../fonts/montserrat-v14-cyrillic_latin-regular.ttf') format('truetype'),
+    url('../fonts/montserrat-v14-cyrillic_latin-regular.svg#Ubuntu') format('svg');
 }
 
 @font-face {
   font-family: 'Russo One';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   font-display: swap;
-  src: url('../fonts/russo-one-v8-cyrillic_latin-regular.eot');
-  src: url('../fonts/russo-one-v8-cyrillic_latin-regular.eot?#iefix')
+  src: url('../fonts/montserrat-v14-cyrillic_latin-700.eot');
+  src: url('../fonts/montserrat-v14-cyrillic_latin-700.eot?#iefix')
       format('embedded-opentype'),
-    url('../fonts/russo-one-v8-cyrillic_latin-regular.woff2') format('woff2'),
-    url('../fonts/russo-one-v8-cyrillic_latin-regular.woff') format('woff'),
-    url('../fonts/russo-one-v8-cyrillic_latin-regular.ttf') format('truetype'),
-    url('../fonts/russo-one-v8-cyrillic_latin-regular.svg#Ubuntu') format('svg');
+    url('../fonts/montserrat-v14-cyrillic_latin-700.woff2') format('woff2'),
+    url('../fonts/montserrat-v14-cyrillic_latin-700.woff') format('woff'),
+    url('../fonts/montserrat-v14-cyrillic_latin-700.ttf') format('truetype'),
+    url('../fonts/montserrat-v14-cyrillic_latin-700.svg#Ubuntu') format('svg');
 }

@@ -286,26 +286,26 @@ template {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('../fonts/lora-v15-cyrillic_latin-regular.eot');
-  src: url('../fonts/lora-v15-cyrillic_latin-regular.eot?#iefix')
+  src: url('../fonts/montserrat-v14-cyrillic_latin-regular.eot');
+  src: url('../fonts/montserrat-v14-cyrillic_latin-regular.eot?#iefix')
       format('embedded-opentype'),
-    url('../fonts/lora-v15-cyrillic_latin-regular.woff2') format('woff2'),
-    url('../fonts/lora-v15-cyrillic_latin-regular.woff') format('woff'),
-    url('../fonts/lora-v15-cyrillic_latin-regular.ttf') format('truetype'),
-    url('../fonts/lora-v15-cyrillic_latin-regular.svg#Ubuntu') format('svg');
+    url('../fonts/montserrat-v14-cyrillic_latin-regular.woff2') format('woff2'),
+    url('../fonts/montserrat-v14-cyrillic_latin-regular.woff') format('woff'),
+    url('../fonts/montserrat-v14-cyrillic_latin-regular.ttf') format('truetype'),
+    url('../fonts/montserrat-v14-cyrillic_latin-regular.svg#Ubuntu') format('svg');
 }
 @font-face {
   font-family: 'Russo One';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   font-display: swap;
-  src: url('../fonts/russo-one-v8-cyrillic_latin-regular.eot');
-  src: url('../fonts/russo-one-v8-cyrillic_latin-regular.eot?#iefix')
+  src: url('../fonts/montserrat-v14-cyrillic_latin-700.eot');
+  src: url('../fonts/montserrat-v14-cyrillic_latin-700.eot?#iefix')
       format('embedded-opentype'),
-    url('../fonts/russo-one-v8-cyrillic_latin-regular.woff2') format('woff2'),
-    url('../fonts/russo-one-v8-cyrillic_latin-regular.woff') format('woff'),
-    url('../fonts/russo-one-v8-cyrillic_latin-regular.ttf') format('truetype'),
-    url('../fonts/russo-one-v8-cyrillic_latin-regular.svg#Ubuntu') format('svg');
+    url('../fonts/montserrat-v14-cyrillic_latin-700.woff2') format('woff2'),
+    url('../fonts/montserrat-v14-cyrillic_latin-700.woff') format('woff'),
+    url('../fonts/montserrat-v14-cyrillic_latin-700.ttf') format('truetype'),
+    url('../fonts/montserrat-v14-cyrillic_latin-700.svg#Ubuntu') format('svg');
 }
 *,
 *:before,
@@ -398,11 +398,8 @@ body.is-open {
 }
   }
 .front-screen h1 {
-  font-family: 'Russo One'
-,
-sans-serif;
-  font-family: var(--f-head);
   font-size: 2em;
+  font-weight: bold;
 }
 @media screen and (min-width: 768px) {
 .front-screen h1 {
@@ -415,10 +412,6 @@ sans-serif;
 }
   }
 .front-screen p {
-  font-family: 'Russo One'
-,
-sans-serif;
-  font-family: var(--f-head);
   font-size: 1em;
   color: #1f3f68;
   color: var(--c-regular);
@@ -492,10 +485,6 @@ sans-serif;
   color: #1f3f68;
   color: var(--c-regular);
   text-decoration: none;
-  font-family: 'Russo One'
-,
-sans-serif;
-  font-family: var(--f-head);
 }
 @media (min-width: 768px) {
 .nav__link {
@@ -637,10 +626,6 @@ body.is-open .hamburger-inner::after {
   font-size: 16px;
   font-size: 1em;
   color: white;
-  font-family: 'Russo One'
-,
-sans-serif;
-  font-family: var(--f-head);
   text-decoration: none;
   background: #5a98d0;
   background: var(--c-light);
@@ -664,7 +649,7 @@ sans-serif;
 }
   }
 .banner {
-  background: url(../../assets//banner.svg) no-repeat;
+  background: url(../../assets/banner.svg) no-repeat;
   background-size: cover;
   font-size: 16px;
 }
@@ -683,10 +668,7 @@ sans-serif;
     padding: 1em 0;
     margin: 0;
     color: white;
-    font-family: 'Russo One'
-,
-sans-serif;
-    font-family: var(--f-head);
+    font-weight: bold;
   }
 .cards {
   color: #1f3f68;
@@ -703,10 +685,6 @@ sans-serif;
 .cards__header {
   font-size: 2em;
   max-width: 17em;
-  font-family: 'Russo One'
-,
-sans-serif;
-  font-family: var(--f-head);
 }
 @media (min-width: 992px) {
 .cards__header {
@@ -758,10 +736,7 @@ sans-serif;
 }
 .cards__title {
   font-size: 1.2em;
-  font-family: 'Russo One'
-,
-sans-serif;
-  font-family: var(--f-head);
+  font-weight: bold;
 }
 .cards__description {
   font-size: 1em;
@@ -773,8 +748,5 @@ sans-serif;
   color: var(--c-light);
   margin-top: 2em;
   display: block;
-  font-family: 'Russo One'
-,
-sans-serif;
-  font-family: var(--f-head);
+  font-weight: bold;
 }
