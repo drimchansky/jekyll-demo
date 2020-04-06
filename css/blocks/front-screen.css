@@ -64,6 +64,5 @@
 .front-screen p {
   font-size: 1em;
   color: var(--c-regular);
-  font-weight: bold;
   opacity: 0.8;
 }

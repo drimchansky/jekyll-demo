@@ -62,6 +62,8 @@
 .cards__image {
   display: block;
   width: 224px;
+  height: 180px;
+  object-fit: contain;
   height: auto;
   transform: translateY(-10%);
 }

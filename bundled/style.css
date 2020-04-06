@@ -415,7 +415,6 @@ body.is-open {
   font-size: 1em;
   color: #1f3f68;
   color: var(--c-regular);
-  font-weight: bold;
   opacity: 0.8;
 }
 .header {
@@ -731,6 +730,9 @@ body.is-open .hamburger-inner::after {
 .cards__image {
   display: block;
   width: 224px;
+  height: 180px;
+  -o-object-fit: contain;
+     object-fit: contain;
   height: auto;
   transform: translateY(-10%);
 }
