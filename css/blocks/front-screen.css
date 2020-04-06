@@ -43,15 +43,21 @@
   }
 }
 
+.front-screen__wrap {
+  @media (min-width: 998px) {
+    transform: translateY(-3em);
+  }
+}
+
 .front-screen h1 {
   font-family: var(--f-head);
-  margin-top: 4em;
   font-size: 2em;
 
+  @media screen and (min-width: 768px) {
+    font-size: 3em;
+  }
   @media screen and (min-width: 998px) {
     max-width: 65%;
-    margin-top: 2em;
-    font-size: 3em;
   }
 }
 

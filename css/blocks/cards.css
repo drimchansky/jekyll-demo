@@ -14,10 +14,10 @@
   max-width: 17em;
   font-family: var(--f-head);
 
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     font-size: 3em;
-    max-width: 10em;
     position: absolute;
+    max-width: 10em;
   }
 }
 
@@ -44,13 +44,13 @@
     box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 850px) {
     grid-column: 2 / span 3;
   }
 }
 
 .cards__item:nth-child(even) {
-  @media (min-width: 768px) {
+  @media (min-width: 850px) {
     grid-column: 1 / 2;
     transform: translateY(50%);
   }
