@@ -10,4 +10,4 @@ defaults:
   - scope:
       type: features
     values:
-      layout: default
+      layout: post
