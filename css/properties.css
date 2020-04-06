@@ -1,5 +1,6 @@
 :root {
-  --f-main: Ubuntu, sans-serif;
+  --f-head: 'Russo One', sans-serif;
+  --f-main: 'Roboto Slab', serif;
   --c-regular: #1f3f68;
   --c-light: #5a98d0;
 }

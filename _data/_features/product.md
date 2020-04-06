@@ -1,7 +1,7 @@
 ---
 image: /assets/img/3.png
-title: Build Your Digital Product That Suitable For Your Need
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+title: Создавайте цифровые продукты для своих потребностей
+description: По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст.
 ---
 
 Rich text

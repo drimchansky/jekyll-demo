@@ -8,11 +8,11 @@ html {
   width: 100%;
   height: 100%;
   overflow-x: hidden;
+  font-family: var(--f-main);
 }
 
 body {
   height: 100%;
-  font-family: var(--f-main);
 }
 
 body.is-open {

@@ -1,5 +1,6 @@
 :root {
-  --f-main: Ubuntu, sans-serif;
+  --f-head: 'Russo One', sans-serif;
+  --f-main: 'Roboto Slab', serif;
   --c-regular: #1f3f68;
   --c-light: #5a98d0;
 }
@@ -281,37 +282,30 @@ template {
 }
 /* ubuntu-regular - cyrillic_latin */
 @font-face {
-  font-family: 'Ubuntu';
+  font-family: 'Roboto Slab';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('../fonts/ubuntu-v14-cyrillic_latin-regular.eot');
-  src: url('../fonts/ubuntu-v14-cyrillic_latin-regular.eot?#iefix')
+  src: url('../fonts/lora-v15-cyrillic_latin-regular.eot');
+  src: url('../fonts/lora-v15-cyrillic_latin-regular.eot?#iefix')
       format('embedded-opentype'),
-    url('../fonts/ubuntu-v14-cyrillic_latin-regular.woff2') format('woff2'),
-    url('../fonts/ubuntu-v14-cyrillic_latin-regular.woff') format('woff'),
-    url('../fonts/ubuntu-v14-cyrillic_latin-regular.ttf') format('truetype'),
-    url('../fonts/ubuntu-v14-cyrillic_latin-regular.svg#Ubuntu') format('svg');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-    U+FEFF, U+FFFD;
+    url('../fonts/lora-v15-cyrillic_latin-regular.woff2') format('woff2'),
+    url('../fonts/lora-v15-cyrillic_latin-regular.woff') format('woff'),
+    url('../fonts/lora-v15-cyrillic_latin-regular.ttf') format('truetype'),
+    url('../fonts/lora-v15-cyrillic_latin-regular.svg#Ubuntu') format('svg');
 }
-/* ubuntu-700 - cyrillic_latin */
 @font-face {
-  font-family: 'Ubuntu';
+  font-family: 'Russo One';
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
   font-display: swap;
-  src: url('../fonts/ubuntu-v14-cyrillic_latin-700.eot');
-  src: url('../fonts/ubuntu-v14-cyrillic_latin-700.eot?#iefix')
+  src: url('../fonts/russo-one-v8-cyrillic_latin-regular.eot');
+  src: url('../fonts/russo-one-v8-cyrillic_latin-regular.eot?#iefix')
       format('embedded-opentype'),
-    url('../fonts/ubuntu-v14-cyrillic_latin-700.woff2') format('woff2'),
-    url('../fonts/ubuntu-v14-cyrillic_latin-700.woff') format('woff'),
-    url('../fonts/ubuntu-v14-cyrillic_latin-700.ttf') format('truetype'),
-    url('../fonts/ubuntu-v14-cyrillic_latin-700.svg#Ubuntu') format('svg');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-    U+FEFF, U+FFFD;
+    url('../fonts/russo-one-v8-cyrillic_latin-regular.woff2') format('woff2'),
+    url('../fonts/russo-one-v8-cyrillic_latin-regular.woff') format('woff'),
+    url('../fonts/russo-one-v8-cyrillic_latin-regular.ttf') format('truetype'),
+    url('../fonts/russo-one-v8-cyrillic_latin-regular.svg#Ubuntu') format('svg');
 }
 *,
 *:before,
@@ -322,13 +316,13 @@ html {
   width: 100%;
   height: 100%;
   overflow-x: hidden;
+  font-family: 'Roboto Slab'
+,
+serif;
+  font-family: var(--f-main);
 }
 body {
   height: 100%;
-  font-family: Ubuntu
-,
-sans-serif;
-  font-family: var(--f-main);
 }
 body.is-open {
   overflow: hidden;
@@ -394,6 +388,10 @@ body.is-open {
     }
   }
 .front-screen h1 {
+  font-family: 'Russo One'
+,
+sans-serif;
+  font-family: var(--f-head);
   margin-top: 4em;
   font-size: 2em;
 }
@@ -405,7 +403,14 @@ body.is-open {
 }
   }
 .front-screen p {
+  font-family: 'Russo One'
+,
+sans-serif;
+  font-family: var(--f-head);
   font-size: 1em;
+  color: #1f3f68;
+  color: var(--c-regular);
+  font-weight: bold;
   opacity: 0.8;
 }
 .header {
@@ -475,6 +480,10 @@ body.is-open {
   color: #1f3f68;
   color: var(--c-regular);
   text-decoration: none;
+  font-family: 'Russo One'
+,
+sans-serif;
+  font-family: var(--f-head);
 }
 @media (min-width: 768px) {
 .nav__link {
@@ -612,9 +621,14 @@ body.is-open .hamburger-inner::after {
 .button {
   display: inline-block;
   padding: 0.8em 1.6em;
+  text-transform: uppercase;
   font-size: 16px;
-  font-size: 1.2em;
+  font-size: 1em;
   color: white;
+  font-family: 'Russo One'
+,
+sans-serif;
+  font-family: var(--f-head);
   text-decoration: none;
   background: #5a98d0;
   background: var(--c-light);
@@ -663,6 +677,7 @@ body.is-open .hamburger-inner::after {
   color: var(--c-regular);
   padding: 3rem 0;
   font-size: 16px;
+  position: relative;
 }
 @media (min-width: 768px) {
 .cards {
@@ -672,11 +687,16 @@ body.is-open .hamburger-inner::after {
 .cards__header {
   font-size: 2em;
   max-width: 17em;
+  font-family: 'Russo One'
+,
+sans-serif;
+  font-family: var(--f-head);
 }
 @media (min-width: 768px) {
 .cards__header {
     font-size: 3em;
-    max-width: 10em
+    max-width: 10em;
+    position: absolute
 }
   }
 .cards__wrapper {
@@ -686,11 +706,6 @@ body.is-open .hamburger-inner::after {
   max-width: 920px;
   margin-left: auto;
 }
-@media (min-width: 768px) {
-.cards__wrapper {
-    transform: translateY(-7em)
-}
-  }
 .cards__item {
   grid-column: span 3;
   justify-self: center;
@@ -727,6 +742,10 @@ body.is-open .hamburger-inner::after {
 }
 .cards__title {
   font-size: 1.2em;
+  font-family: 'Russo One'
+,
+sans-serif;
+  font-family: var(--f-head);
 }
 .cards__description {
   font-size: 1em;
@@ -738,4 +757,8 @@ body.is-open .hamburger-inner::after {
   color: var(--c-light);
   margin-top: 2em;
   display: block;
+  font-family: 'Russo One'
+,
+sans-serif;
+  font-family: var(--f-head);
 }

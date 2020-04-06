@@ -1,8 +1,8 @@
 ---
 name: internet
 image: /assets/img/2.png
-title: Make Your business To Be Better Famous In Internet
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+title: Повысьте популярность вашего бизнеса в интернете
+description: По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст.
 ---
 
 Rich text

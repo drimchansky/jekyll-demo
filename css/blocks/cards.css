@@ -2,6 +2,7 @@
   color: var(--c-regular);
   padding: 3rem 0;
   font-size: 16px;
+  position: relative;
 
   @media (min-width: 768px) {
     font-size: 20px;
@@ -11,10 +12,12 @@
 .cards__header {
   font-size: 2em;
   max-width: 17em;
+  font-family: var(--f-head);
 
   @media (min-width: 768px) {
     font-size: 3em;
     max-width: 10em;
+    position: absolute;
   }
 }
 
@@ -24,10 +27,6 @@
   grid-auto-flow: dense;
   max-width: 920px;
   margin-left: auto;
-
-  @media (min-width: 768px) {
-    transform: translateY(-7em);
-  }
 }
 
 .cards__item {
@@ -70,6 +69,7 @@
 
 .cards__title {
   font-size: 1.2em;
+  font-family: var(--f-head);
 }
 
 .cards__description {
@@ -82,4 +82,5 @@
   color: var(--c-light);
   margin-top: 2em;
   display: block;
+  font-family: var(--f-head);
 }

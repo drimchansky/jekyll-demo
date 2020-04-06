@@ -1,7 +1,7 @@
 ---
 image: /assets/img/1.png
-title: Bring Technology To Your Comfrotable Home
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+title: Внестие в ваш дом комфорт вместе с новыми технологиями
+description: По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст.
 ---
 
 Rich text
