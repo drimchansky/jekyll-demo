@@ -343,6 +343,8 @@ body.is-open {
 .container_front-page {
   max-width: 1100px;
 }
+.container_cards {
+}
 .front-screen {
   position: relative;
   display: flex;
@@ -656,3 +658,22 @@ body.is-open .hamburger-inner::after {
     margin: 0;
     color: white;
   }
+.cards {
+}
+.cards__header {
+}
+.cards__wrapper {
+}
+.cards__item {
+}
+.cards__image {
+  display: block;
+  width: 200px;
+  height: auto;
+}
+.cards__title {
+}
+.cards__description {
+}
+.cards__link {
+}

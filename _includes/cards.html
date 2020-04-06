@@ -1,0 +1,21 @@
+<div class="cards">
+  <div class="container container_cards">
+    <h2 class="cards__header">What we do to help
+      our client grow in
+      digital era,</h2>
+    <div class="cards__wrapper">
+
+      {% for feature in site.features limit:3 %}
+
+      <div class="cards__item">
+        <img src="{{feature.image}}" alt="Feature image" class="cards__image">
+        <h3 class="cards__title">{{feature.title}}</h3>
+        <p class="cards__description">{{feature.description}}</p>
+        <a href="{{feature.url}}" class="cards__link">Learn more...</a>
+      </div>
+
+      {% endfor %}
+
+    </div>
+  </div>
+</div>
