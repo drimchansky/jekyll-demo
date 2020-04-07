@@ -6,13 +6,13 @@
   font-size: 1em;
   color: white;
   text-decoration: none;
-  background: var(--c-light);
+  background: var(--c-medium);
   border-radius: 10px;
   box-shadow: 5px 20px 50px rgba(53, 110, 173, 0.2);
-  transition: box-shadow 0.2s;
+  transition: background 0.2s;
 
   &:hover {
-    box-shadow: 5px 5px 10px rgba(53, 110, 173, 0.1);
+    background: var(--c-medium-bold);
   }
 
   &:focus {

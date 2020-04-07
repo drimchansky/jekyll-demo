@@ -1,6 +1,8 @@
 :root {
   --f-main: 'Roboto Slab', sans-serif;
   --c-regular: #1f3f68;
+  --c-medium: #005bff;
+  --c-medium-bold: #004ed6;
   --c-light: #5a98d0;
 }
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -634,14 +636,15 @@ body.is-open .hamburger-inner::after {
   font-size: 1em;
   color: white;
   text-decoration: none;
-  background: #5a98d0;
-  background: var(--c-light);
+  background: #005bff;
+  background: var(--c-medium);
   border-radius: 10px;
   box-shadow: 5px 20px 50px rgba(53, 110, 173, 0.2);
-  transition: box-shadow 0.2s;
+  transition: background 0.2s;
 }
 .button:hover {
-    box-shadow: 5px 5px 10px rgba(53, 110, 173, 0.1);
+    background: #004ed6;
+    background: var(--c-medium-bold);
   }
 .button:focus {
     outline-color: black;
