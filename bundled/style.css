@@ -1,5 +1,5 @@
 :root {
-  --f-main: 'Roboto Slab', serif;
+  --f-main: 'Roboto Slab', sans-serif;
   --c-regular: #1f3f68;
   --c-light: #5a98d0;
 }
@@ -317,7 +317,7 @@ html {
   overflow-x: hidden;
   font-family: 'Roboto Slab'
 ,
-serif;
+sans-serif;
   font-family: var(--f-main);
 }
 body {
@@ -749,7 +749,7 @@ body.is-open .hamburger-inner::after {
   font-weight: bold;
 }
 .cards__description {
-  font-size: 1em;
+  font-size: 0.9em;
 }
 .cards__link {
   font-size: 1.1em;
