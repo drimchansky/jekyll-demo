@@ -1,3 +1,109 @@
 .sponsors {
   background: var(--c-light);
+  padding-top: 2rem;
+
+  @media (min-width: 998px) {
+    padding-top: 6rem;
+  }
+}
+
+.sponsors__caption-wrapper {
+  display: flex;
+  flex-direction: column;
+  color: white;
+
+  @media (min-width: 992px) {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  & h3 {
+    font-size: 2.2rem;
+    margin-bottom: 0;
+
+    @media (min-width: 992px) {
+      margin: 0;
+    }
+  }
+
+  & p {
+    font-size: 1rem;
+    max-width: 500px;
+    opacity: 0.75;
+
+    @media (min-width: 992px) {
+      margin: 0;
+      margin-left: 3rem;
+    }
+  }
+}
+
+.sponsors__grid {
+  max-width: 1000px;
+  margin: 3rem auto 0 auto;
+  padding-bottom: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  @media (min-width: 998px) {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    padding-bottom: 6rem;
+  }
+
+  & > div {
+    padding: 1rem;
+    position: relative;
+    height: 0;
+    padding-bottom: 50%;
+
+    /* crutch lines between elements */
+    @media (min-width: 1200px) {
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(5),
+      &:nth-child(6),
+      &:nth-child(7) {
+        border-right: 2px solid rgba(255, 255, 255, 0.5);
+      }
+      &:nth-child(5),
+      &:nth-child(6),
+      &:nth-child(7),
+      &:nth-child(8) {
+        border-top: 2px solid rgba(255, 255, 255, 0.5);
+      }
+    }
+  }
+
+  & img,
+  & a {
+    position: absolute;
+    max-width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  & a {
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    display: block;
+    height: 100%;
+    width: 100%;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--c-darker);
+    opacity: 0.8;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
 }

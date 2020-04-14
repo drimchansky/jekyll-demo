@@ -783,7 +783,112 @@ body.is-open .hamburger-inner::after {
 .sponsors {
   background: #5a98d0;
   background: var(--c-light);
+  padding-top: 2rem;
 }
+@media (min-width: 998px) {
+.sponsors {
+    padding-top: 6rem
+}
+  }
+.sponsors__caption-wrapper {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+@media (min-width: 992px) {
+.sponsors__caption-wrapper {
+    flex-direction: row;
+    align-items: center
+}
+  }
+.sponsors__caption-wrapper h3 {
+    font-size: 2.2rem;
+    margin-bottom: 0;
+  }
+@media (min-width: 992px) {
+.sponsors__caption-wrapper h3 {
+      margin: 0
+  }
+    }
+.sponsors__caption-wrapper p {
+    font-size: 1rem;
+    max-width: 500px;
+    opacity: 0.75;
+  }
+@media (min-width: 992px) {
+.sponsors__caption-wrapper p {
+      margin: 0;
+      margin-left: 3rem
+  }
+    }
+.sponsors__grid {
+  max-width: 1000px;
+  margin: 3rem auto 0 auto;
+  padding-bottom: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+@media (min-width: 768px) {
+.sponsors__grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
+}
+  }
+@media (min-width: 998px) {
+.sponsors__grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    padding-bottom: 6rem
+}
+  }
+.sponsors__grid > div {
+    padding: 1rem;
+    position: relative;
+    height: 0;
+    padding-bottom: 50%;
+  }
+/* crutch lines between elements */
+@media (min-width: 1200px) {
+      .sponsors__grid > div:nth-child(1),
+      .sponsors__grid > div:nth-child(2),
+      .sponsors__grid > div:nth-child(3),
+      .sponsors__grid > div:nth-child(5),
+      .sponsors__grid > div:nth-child(6),
+      .sponsors__grid > div:nth-child(7) {
+        border-right: 2px solid rgba(255, 255, 255, 0.5);
+      }
+      .sponsors__grid > div:nth-child(5),
+      .sponsors__grid > div:nth-child(6),
+      .sponsors__grid > div:nth-child(7),
+      .sponsors__grid > div:nth-child(8) {
+        border-top: 2px solid rgba(255, 255, 255, 0.5);
+      }
+    }
+.sponsors__grid img,
+  .sponsors__grid a {
+    position: absolute;
+    max-width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+.sponsors__grid a {
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    display: block;
+    height: 100%;
+    width: 100%;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #316099;
+    background: var(--c-darker);
+    opacity: 0.8;
+    transition: opacity 0.2s;
+  }
+.sponsors__grid a:hover {
+      opacity: 1;
+    }
 .footer {
   background: #316099;
   background: var(--c-darker);
