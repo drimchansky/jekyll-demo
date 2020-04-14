@@ -4,6 +4,7 @@
   --c-medium: #005bff;
   --c-medium-bold: #004ed6;
   --c-light: #5a98d0;
+  --c-darker: #316099;
 }
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -632,6 +633,7 @@ body.is-open .hamburger-inner::after {
   display: inline-block;
   padding: 0.8em 1.6em;
   text-transform: uppercase;
+  cursor: pointer;
   font-size: 16px;
   font-size: 1em;
   color: white;
@@ -777,4 +779,15 @@ body.is-open .hamburger-inner::after {
   margin-top: 2em;
   display: block;
   font-weight: bold;
+}
+.sponsors {
+  background: #5a98d0;
+  background: var(--c-light);
+}
+.footer {
+  background: #316099;
+  background: var(--c-darker);
+  border-radius: 0 200px 0 0;
+  height: 500px;
+  margin-right: 5vw;
 }

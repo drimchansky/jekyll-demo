@@ -1,0 +1,6 @@
+.footer {
+  background: var(--c-darker);
+  border-radius: 0 200px 0 0;
+  height: 500px;
+  margin-right: 5vw;
+}
