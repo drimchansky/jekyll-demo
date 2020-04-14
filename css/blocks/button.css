@@ -29,3 +29,21 @@
     margin-top: 40px;
   }
 }
+
+.button_footer {
+  background: var(--c-light);
+  padding: 1.5rem 3rem;
+  margin-top: 2rem;
+  opacity: 1;
+  transition: opacity 0.2s;
+
+  @media (min-width: 998px) {
+    margin-top: 0;
+    margin-right: 10rem;
+  }
+
+  &:hover {
+    background: var(--c-light);
+    opacity: 0.8;
+  }
+}

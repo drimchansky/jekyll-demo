@@ -77,7 +77,6 @@
   width: 224px;
   height: 180px;
   object-fit: contain;
-  height: auto;
   transform: translateY(-10%);
 }
 
