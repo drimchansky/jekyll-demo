@@ -344,7 +344,7 @@ body.is-open {
   justify-content: center;
   align-items: flex-start;
 }
-.container_cards {
+.container_contacts {
 }
 .front-screen {
   position: relative;
@@ -634,6 +634,7 @@ body.is-open .hamburger-inner::after {
   padding: 0.8em 1.6em;
   text-transform: uppercase;
   cursor: pointer;
+  border: none;
   font-size: 16px;
   font-size: 1em;
   color: white;
