@@ -1,12 +1,8 @@
 .cards {
   color: var(--c-regular);
   padding: 3rem 0;
-  font-size: 16px;
   position: relative;
 
-  @media (min-width: 768px) {
-    font-size: 20px;
-  }
   @media (min-width: 998px) {
     padding-bottom: 8rem;
   }
@@ -84,12 +80,13 @@
 }
 
 .cards__title {
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: bold;
 }
 
 .cards__description {
-  font-size: 0.9em;
+  font-size: 1em;
+  line-height: 1.2;
 }
 
 .cards__link {

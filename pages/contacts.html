@@ -6,40 +6,10 @@ title: Наши контакты
 
 {% include banner.html %}
 
-<section class="contacts">
+<section>
   <div class="container container_contacts">
 
-    <div class="contacts__info">
-      <img src="../assets/img//fogg-message-sent.png" alt="Message image">
-      <span class="contacts__title">Адрес</span>
-      <p class="contacts__text">Котлас, Архангельская область, Россия</p>
-      <span class="contacts__title">Телефоны</span>
-      <div class="contacts__wrap">
-        <svg>
-          <use xlink:href="../assets/icons/call.svg#call"></use>
-        </svg>
-        <p class="contacts__text">+62-812-7313-4321</p>
-      </div>
-      <div class="contacts__wrap">
-        <svg>
-          <use xlink:href="../assets/icons/call.svg#call"></use>
-        </svg>
-        <p class="contacts__text">+62-817-000-1234</p>
-      </div>
-      <span class="contacts__title">Онлайн</span>
-      <div class="contacts__wrap">
-        <svg>
-          <use xlink:href="../assets/icons/globe.svg#globe"></use>
-        </svg>
-        <p class="contacts__text">abrakadabra.com</p>
-      </div>
-      <div class="contacts__wrap">
-        <svg>
-          <use xlink:href="../assets/icons/envelope.svg#envelope"></use>
-        </svg>
-        <p class="contacts__text">abrakadabra@gmail.com</p>
-      </div>
-    </div>
+    {% include contacts-info.html %}
 
     {% include contact-form.html %}
 

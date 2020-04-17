@@ -16,4 +16,13 @@
 }
 
 .container_contacts {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+
+  @media (min-width: 998px) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
 }

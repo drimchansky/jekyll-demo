@@ -4,17 +4,17 @@
   text-transform: uppercase;
   cursor: pointer;
   border: none;
-  font-size: 16px;
-  font-size: 1em;
+  font-size: 1.1rem;
   color: white;
   text-decoration: none;
   background: var(--c-medium);
   border-radius: 10px;
   box-shadow: 5px 20px 50px rgba(53, 110, 173, 0.2);
-  transition: background 0.2s;
+  transition: background 0.2s, box-shadow 0.2s;
 
   &:hover {
     background: var(--c-medium-bold);
+    box-shadow: none;
   }
 
   &:focus {
@@ -40,15 +40,23 @@
 
   @media (min-width: 998px) {
     margin-top: 0;
-    margin-right: 3rem;
   }
 
   @media (min-width: 1200px) {
-    margin-right: 10rem;
+    margin-right: 6rem;
   }
 
   &:hover {
     background: var(--c-light);
     opacity: 0.8;
+  }
+}
+
+.button_form {
+  background: var(--c-light);
+  margin-top: 1.5rem;
+
+  &:hover {
+    background: var(--c-darker);
   }
 }
