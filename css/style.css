@@ -12,6 +12,8 @@
 @import './blocks/banner.css';
 @import './blocks/cards.css';
 @import './blocks/sponsors.css';
+@import './blocks/caption.css';
 @import './blocks/footer.css';
 @import './blocks/contacts-info.css';
 @import './blocks/contact-form.css';
+@import './blocks/projects-list.css';
