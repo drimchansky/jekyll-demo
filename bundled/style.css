@@ -957,7 +957,7 @@ body.is-open .hamburger-inner::after {
 .caption_projects {
   color: #1f3f68;
   color: var(--c-regular);
-  margin: 3rem 0;
+  margin: 1rem 0 3rem 0;
 }
 .footer {
   background: #316099;
@@ -1225,11 +1225,16 @@ body.is-open .hamburger-inner::after {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  overflow: hidden;
 }
 @media (min-width: 768px) {
 .projects-list__item {
     width: 47%
 }
+
+    .projects-list__item:hover .projects-list__image-placeholder {
+      transform: scale(1.1);
+    }
   }
 .projects-list__item:not(:first-child) {
     margin-top: 1rem;
@@ -1273,6 +1278,18 @@ body.is-open .hamburger-inner::after {
       rgba(21, 101, 192, 0.6) 74.54%
     );
   }
+.projects-list__image-placeholder {
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  transition: transform 0.2s;
+}
 .projects-list__inner {
   position: absolute;
   left: 0;

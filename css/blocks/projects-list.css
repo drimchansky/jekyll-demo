@@ -21,9 +21,14 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  overflow: hidden;
 
   @media (min-width: 768px) {
     width: 47%;
+
+    &:hover .projects-list__image-placeholder {
+      transform: scale(1.1);
+    }
   }
 
   &:not(:first-child) {
@@ -72,6 +77,19 @@
       rgba(21, 101, 192, 0.6) 74.54%
     );
   }
+}
+
+.projects-list__image-placeholder {
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  transition: transform 0.2s;
 }
 
 .projects-list__inner {
