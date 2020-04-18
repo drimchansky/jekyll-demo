@@ -1231,10 +1231,6 @@ body.is-open .hamburger-inner::after {
 .projects-list__item {
     width: 47%
 }
-
-    .projects-list__item:hover .projects-list__image-placeholder {
-      transform: scale(1.1);
-    }
   }
 .projects-list__item:not(:first-child) {
     margin-top: 1rem;
@@ -1259,6 +1255,10 @@ body.is-open .hamburger-inner::after {
           rgba(31, 63, 104, 0.37) 97.78%
         );
       }
+.projects-list__link-wrap:hover .projects-list__image-placeholder,
+  .projects-list__link-wrap:focus .projects-list__image-placeholder {
+    transform: scale(1.1);
+  }
 .projects-list__wrap {
   position: relative;
   width: 100%;
