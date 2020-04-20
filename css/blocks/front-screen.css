@@ -52,6 +52,7 @@
 .front-screen h1 {
   font-size: 2em;
   font-weight: bold;
+  font-family: var(--f-title);
 
   @media screen and (min-width: 768px) {
     font-size: 3em;

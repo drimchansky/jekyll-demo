@@ -4,13 +4,16 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('../fonts/montserrat-v14-cyrillic_latin-regular.eot');
-  src: url('../fonts/montserrat-v14-cyrillic_latin-regular.eot?#iefix')
+  src: url('../assets/fonts/montserrat-v14-cyrillic_latin-regular.eot');
+  src: url('../assets/fonts/montserrat-v14-cyrillic_latin-regular.eot?#iefix')
       format('embedded-opentype'),
-    url('../fonts/montserrat-v14-cyrillic_latin-regular.woff2') format('woff2'),
-    url('../fonts/montserrat-v14-cyrillic_latin-regular.woff') format('woff'),
-    url('../fonts/montserrat-v14-cyrillic_latin-regular.ttf') format('truetype'),
-    url('../fonts/montserrat-v14-cyrillic_latin-regular.svg#Ubuntu') format('svg');
+    url('../assets/fonts/montserrat-v14-cyrillic_latin-regular.woff2')
+      format('woff2'),
+    url('../assets/fonts/montserrat-v14-cyrillic_latin-regular.woff') format('woff'),
+    url('../assets/fonts/montserrat-v14-cyrillic_latin-regular.ttf')
+      format('truetype'),
+    url('../assets/fonts/montserrat-v14-cyrillic_latin-regular.svg#Ubuntu')
+      format('svg');
 }
 
 @font-face {
@@ -18,11 +21,11 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url('../fonts/montserrat-v14-cyrillic_latin-700.eot');
-  src: url('../fonts/montserrat-v14-cyrillic_latin-700.eot?#iefix')
+  src: url('../assets/fonts/montserrat-v14-cyrillic_latin-700.eot');
+  src: url('../assets/fonts/montserrat-v14-cyrillic_latin-700.eot?#iefix')
       format('embedded-opentype'),
-    url('../fonts/montserrat-v14-cyrillic_latin-700.woff2') format('woff2'),
-    url('../fonts/montserrat-v14-cyrillic_latin-700.woff') format('woff'),
-    url('../fonts/montserrat-v14-cyrillic_latin-700.ttf') format('truetype'),
-    url('../fonts/montserrat-v14-cyrillic_latin-700.svg#Ubuntu') format('svg');
+    url('../assets/fonts/montserrat-v14-cyrillic_latin-700.woff2') format('woff2'),
+    url('../assets/fonts/montserrat-v14-cyrillic_latin-700.woff') format('woff'),
+    url('../assets/fonts/montserrat-v14-cyrillic_latin-700.ttf') format('truetype'),
+    url('../assets/fonts/montserrat-v14-cyrillic_latin-700.svg#Ubuntu') format('svg');
 }

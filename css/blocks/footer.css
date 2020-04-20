@@ -54,6 +54,7 @@
     font-size: 1.5rem;
     max-width: 80%;
     margin: 1rem 0 2rem 0;
+    font-family: var(--f-title);
 
     @media (min-width: 768px) {
       max-width: 500px;
@@ -97,6 +98,7 @@
   & span {
     font-size: 1.3em;
     font-weight: bold;
+    font-family: var(--f-title);
   }
 
   & ul {

@@ -11,6 +11,7 @@
 .cards__header {
   font-size: 2em;
   max-width: 17em;
+  font-family: var(--f-title);
 
   @media (min-width: 992px) {
     font-size: 3em;
@@ -82,6 +83,7 @@
 .cards__title {
   font-size: 1.1em;
   font-weight: bold;
+  font-family: var(--f-title);
 }
 
 .cards__description {

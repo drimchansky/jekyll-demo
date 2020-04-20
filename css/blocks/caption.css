@@ -11,6 +11,7 @@
   & h3 {
     font-size: 2.2rem;
     margin-bottom: 0;
+    font-family: var(--f-title);
 
     @media (min-width: 992px) {
       padding-left: 2rem;

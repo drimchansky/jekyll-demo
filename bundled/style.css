@@ -1,5 +1,6 @@
 :root {
   --f-main: 'Roboto Slab', sans-serif;
+  --f-title: 'Russo One', sans-serif;
   --c-regular: #1f3f68;
   --c-medium: #005bff;
   --c-medium-bold: #004ed6;
@@ -288,26 +289,29 @@ template {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('../fonts/montserrat-v14-cyrillic_latin-regular.eot');
-  src: url('../fonts/montserrat-v14-cyrillic_latin-regular.eot?#iefix')
+  src: url('../assets/fonts/montserrat-v14-cyrillic_latin-regular.eot');
+  src: url('../assets/fonts/montserrat-v14-cyrillic_latin-regular.eot?#iefix')
       format('embedded-opentype'),
-    url('../fonts/montserrat-v14-cyrillic_latin-regular.woff2') format('woff2'),
-    url('../fonts/montserrat-v14-cyrillic_latin-regular.woff') format('woff'),
-    url('../fonts/montserrat-v14-cyrillic_latin-regular.ttf') format('truetype'),
-    url('../fonts/montserrat-v14-cyrillic_latin-regular.svg#Ubuntu') format('svg');
+    url('../assets/fonts/montserrat-v14-cyrillic_latin-regular.woff2')
+      format('woff2'),
+    url('../assets/fonts/montserrat-v14-cyrillic_latin-regular.woff') format('woff'),
+    url('../assets/fonts/montserrat-v14-cyrillic_latin-regular.ttf')
+      format('truetype'),
+    url('../assets/fonts/montserrat-v14-cyrillic_latin-regular.svg#Ubuntu')
+      format('svg');
 }
 @font-face {
   font-family: 'Russo One';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url('../fonts/montserrat-v14-cyrillic_latin-700.eot');
-  src: url('../fonts/montserrat-v14-cyrillic_latin-700.eot?#iefix')
+  src: url('../assets/fonts/montserrat-v14-cyrillic_latin-700.eot');
+  src: url('../assets/fonts/montserrat-v14-cyrillic_latin-700.eot?#iefix')
       format('embedded-opentype'),
-    url('../fonts/montserrat-v14-cyrillic_latin-700.woff2') format('woff2'),
-    url('../fonts/montserrat-v14-cyrillic_latin-700.woff') format('woff'),
-    url('../fonts/montserrat-v14-cyrillic_latin-700.ttf') format('truetype'),
-    url('../fonts/montserrat-v14-cyrillic_latin-700.svg#Ubuntu') format('svg');
+    url('../assets/fonts/montserrat-v14-cyrillic_latin-700.woff2') format('woff2'),
+    url('../assets/fonts/montserrat-v14-cyrillic_latin-700.woff') format('woff'),
+    url('../assets/fonts/montserrat-v14-cyrillic_latin-700.ttf') format('truetype'),
+    url('../assets/fonts/montserrat-v14-cyrillic_latin-700.svg#Ubuntu') format('svg');
 }
 .container {
   width: 100%;
@@ -1112,6 +1116,10 @@ body.is-open {
 .front-screen h1 {
   font-size: 2em;
   font-weight: bold;
+  font-family: 'Russo One'
+,
+sans-serif;
+  font-family: var(--f-title);
 }
 @media screen and (min-width: 768px) {
 .front-screen h1 {
@@ -1428,6 +1436,10 @@ body.is-open .hamburger-inner::after {
 .cards__header {
   font-size: 2em;
   max-width: 17em;
+  font-family: 'Russo One'
+,
+sans-serif;
+  font-family: var(--f-title);
 }
 @media (min-width: 992px) {
 .cards__header {
@@ -1497,6 +1509,10 @@ body.is-open .hamburger-inner::after {
 .cards__title {
   font-size: 1.1em;
   font-weight: bold;
+  font-family: 'Russo One'
+,
+sans-serif;
+  font-family: var(--f-title);
 }
 .cards__description {
   font-size: 1em;
@@ -1622,6 +1638,10 @@ body.is-open .hamburger-inner::after {
 .caption h3 {
     font-size: 2.2rem;
     margin-bottom: 0;
+    font-family: 'Russo One'
+,
+sans-serif;
+    font-family: var(--f-title);
   }
 @media (min-width: 992px) {
 .caption h3 {
@@ -1702,6 +1722,10 @@ body.is-open .hamburger-inner::after {
     font-size: 1.5rem;
     max-width: 80%;
     margin: 1rem 0 2rem 0;
+    font-family: 'Russo One'
+,
+sans-serif;
+    font-family: var(--f-title);
   }
 @media (min-width: 768px) {
 .footer__caption-wrapper h6 {
@@ -1741,6 +1765,10 @@ body.is-open .hamburger-inner::after {
 .footer__list span {
     font-size: 1.3em;
     font-weight: bold;
+    font-family: 'Russo One'
+,
+sans-serif;
+    font-family: var(--f-title);
   }
 .footer__list ul {
     padding: 0;
