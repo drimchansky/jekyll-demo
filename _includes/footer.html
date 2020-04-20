@@ -21,12 +21,13 @@
       </div>
       <div class="footer__list">
         <span>Страницы</span>
+
         <ul>
-          <li><a href="/about">О нас</a></li>
-          <li><a href="/projects">Проекты</a></li>
-          <li><a href="/blog">Блог</a></li>
-          <li><a href="/contacts">Контакты</a></li>
+          {% for p in site.data.navigation %}
+          <li><a href="{{p.url}}">{{p.name}}</a></li>
+          {% endfor %}
         </ul>
+
       </div>
       <div class="footer__list">
         <span>Социальные сети</span>

@@ -4,8 +4,8 @@
 - name: Проекты
   url: /projects
 
-- name: Блог
-  url: /blog
+- name: Новости
+  url: /news
 
 - name: Контакты
   url: /contacts
