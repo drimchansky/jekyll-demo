@@ -1,4 +1,7 @@
+/* COMMON STYLES FOR NEWS ITEM */
+
 .news-item {
+  position: relative;
   display: flex;
   flex-direction: column;
   color: var(--c-regular);
@@ -65,7 +68,7 @@
     width: 30px;
     position: relative;
     cursor: pointer;
-    margin: 0.5rem;
+    margin: 0.2rem;
   }
 
   & svg {
@@ -76,4 +79,39 @@
     height: 100%;
     width: 100%;
   }
+}
+
+/* SPECIFIC ITEMS */
+
+.news-item__big {
+  @media (min-width: 768px) {
+    flex-direction: row-reverse;
+
+    & .news-item__image-wrapper {
+      width: 140%;
+      min-width: 450px;
+    }
+
+    & .news-item__content {
+      position: relative;
+    }
+    & .news-item__info {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+
+      & .news-item__actions {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  @media (min-width: 992px) {
+    & .news-item__image-wrapper {
+      width: 180%;
+    }
+  }
+}
+
+.news-item__horizontal {
 }
