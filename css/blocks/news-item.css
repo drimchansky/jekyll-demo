@@ -1,0 +1,36 @@
+.news-item {
+  border: 1px solid black;
+  display: flex;
+}
+
+.news-item__image-wrapper {
+  img {
+  }
+}
+
+.news-item__content {
+  & h4 {
+  }
+
+  & p {
+  }
+}
+
+.news-item__info {
+}
+
+.news-item__meta {
+  & span {
+  }
+
+  & small {
+  }
+}
+
+.news-item__actions {
+  & button {
+  }
+
+  & svg {
+  }
+}

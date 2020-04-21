@@ -26,3 +26,8 @@ body {
 body.is-open {
   overflow: hidden;
 }
+
+hr {
+  background: var(--c-light);
+  margin: 1rem 0;
+}
