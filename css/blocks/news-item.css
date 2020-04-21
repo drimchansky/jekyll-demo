@@ -30,8 +30,10 @@
 }
 
 .news-item__content {
-  & h4 {
+  & a {
     font-family: var(--f-title);
+    color: var(--c-regular);
+    text-decoration: none;
     font-size: 1.5rem;
     margin: 1rem 0;
   }
@@ -114,4 +116,27 @@
 }
 
 .news-item__horizontal {
+  @media (min-width: 576px) {
+    flex-direction: row;
+
+    & .news-item__image-wrapper {
+      max-width: 300px;
+    }
+
+    & .news-item__content {
+      padding-left: 0.5rem;
+
+      & a {
+        margin-top: 0;
+      }
+    }
+
+    .news-item__info {
+      justify-content: flex-start;
+    }
+
+    & .news-item__actions {
+      margin-left: 1rem;
+    }
+  }
 }
