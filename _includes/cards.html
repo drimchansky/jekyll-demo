@@ -8,10 +8,10 @@
       {% for feature in site.features  %}
 
       <div class="cards__item">
-        <img src="{{feature.image}}" alt="Feature image" class="cards__image">
+        <img src="{{feature.image}}" alt="Feature image" class="cards__image" />
         <h3 class="cards__title">{{feature.title}}</h3>
         <p class="cards__description">{{feature.description}}</p>
-        <a href="{{feature.url}}" class="cards__link editable">Read more...</a>
+        <a href="/features/tech" class="cards__link editable">Read more...</a>
       </div>
 
       {% endfor %}
