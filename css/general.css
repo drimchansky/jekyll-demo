@@ -21,6 +21,7 @@ html {
 
 body {
   height: 100%;
+  position: relative;
 }
 
 body.is-open {

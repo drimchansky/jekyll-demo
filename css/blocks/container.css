@@ -6,6 +6,11 @@
   margin: 0 auto;
 }
 
+.container_header {
+  display: flex;
+  align-items: center;
+}
+
 .container_front-page {
   max-width: 1100px;
   height: 100%;

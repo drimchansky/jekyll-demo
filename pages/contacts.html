@@ -28,4 +28,16 @@ title: Наши контакты
 
 <script src="https://api-maps.yandex.ru/2.1/?apikey=<8dd98488-a2e4-43a5-916c-14ebe694fbfe>&lang=ru_RU"></script>
 
+<script>
+  ymaps.ready(init)
+
+  function init() {
+    const myMap = new ymaps.Map('map', {
+      center: [61.246607, 46.656649],
+      zoom: 12,
+    })
+  }
+
+</script>
+
 {% include footer.html %}
