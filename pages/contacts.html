@@ -4,6 +4,7 @@ permalink: /contacts
 title: Наши контакты
 ---
 
+
 {% include banner.html %}
 
 <section>
@@ -14,6 +15,17 @@ title: Наши контакты
     {% include contact-form.html %}
 
   </div>
+
+  <div class="map-wrapper">
+    <div class="map-inner">
+      <div class="map" id="map"></div>
+    </div>
+
+  </div>
+
+
 </section>
+
+<script src="https://api-maps.yandex.ru/2.1/?apikey=<8dd98488-a2e4-43a5-916c-14ebe694fbfe>&lang=ru_RU"></script>
 
 {% include footer.html %}

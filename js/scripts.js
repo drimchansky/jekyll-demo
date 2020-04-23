@@ -1,1 +1,2 @@
-import './components/hamburger';
+import './components/hamburger'
+import './components/map'

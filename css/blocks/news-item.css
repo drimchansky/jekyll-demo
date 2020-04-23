@@ -31,6 +31,7 @@
 
 .news-item__content {
   & a {
+    display: block;
     font-family: var(--f-title);
     color: var(--c-regular);
     text-decoration: none;
@@ -139,4 +140,7 @@
       margin-left: 1rem;
     }
   }
+}
+
+.news-item__vertical {
 }

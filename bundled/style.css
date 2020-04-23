@@ -2073,6 +2073,7 @@ sans-serif;
     width: 100%;
   }
 .news-item__content a {
+    display: block;
     font-family: 'Russo One'
 ,
 sans-serif;
@@ -2172,3 +2173,33 @@ sans-serif;
       margin-left: 1rem;
     }
   }
+.news-item__vertical {
+}
+.map-wrapper {
+  padding: 2rem 10px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+@media (min-width: 576px) {
+.map-wrapper {
+    padding-bottom: 4rem
+}
+  }
+.map-inner {
+  position: relative;
+  height: 0;
+  padding-bottom: 100%;
+}
+@media (min-width: 576px) {
+.map-inner {
+    padding-bottom: 56%
+}
+  }
+.map {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
