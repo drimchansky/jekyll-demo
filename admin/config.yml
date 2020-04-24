@@ -18,3 +18,13 @@ collections:
           - { label: Слоган, name: slogan, widget: string }
           - { label: Почта, name: email, widget: string }
           - { label: Адрес, name: address, widget: string }
+  - label: 'Страницы'
+    name: 'pages'
+    files:
+      - label: 'Главная'
+        name: 'home'
+        file: '_data/content/home.yml'
+        fields:
+          - { label: Заголовок, name: title, widget: string }
+          - { label: Подзаголовок, name: subtitle, widget: string }
+          - { label: Главная кнопка, name: button_text, widget: string }
