@@ -21,15 +21,14 @@ collections:
   - label: 'Страницы'
     name: 'pages'
     files:
-      - label: 'Главная'
-        name: 'home'
-        file: '_data/content/home.yml'
+      - label: Главная
+        name: home
+        file: '_data/content'
         fields:
-          - label: Главный экран
-            name: first
+          - label: 'Главный экран'
+            name: front
             widget: object
-            collapsed: true
+            file: '_data/site.yml'
             fields:
               - { label: Заголовок, name: title, widget: string }
               - { label: Подзаголовок, name: subtitle, widget: string }
-              - { label: Главная кнопка, name: button, widget: string }
