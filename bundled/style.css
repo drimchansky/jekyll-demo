@@ -2156,6 +2156,7 @@ sans-serif;
   color: #1f3f68;
   color: var(--c-regular);
   padding-bottom: 2rem;
+  height: 100%;
 }
 .news-item__image-wrapper {
   height: 100%;
@@ -2291,8 +2292,11 @@ sans-serif;
       margin-left: 1rem;
     }
   }
-.news-item__vertical {
-}
+@media (min-width: 768px) {
+    .news-item__vertical .news-item__image-wrapper {
+      height: auto;
+    }
+  }
 .map-wrapper {
   padding: 2rem 10px;
   width: 100%;

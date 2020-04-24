@@ -6,6 +6,7 @@
   flex-direction: column;
   color: var(--c-regular);
   padding-bottom: 2rem;
+  height: 100%;
 }
 
 .news-item__image-wrapper {
@@ -151,4 +152,9 @@
 }
 
 .news-item__vertical {
+  @media (min-width: 768px) {
+    .news-item__image-wrapper {
+      height: auto;
+    }
+  }
 }
