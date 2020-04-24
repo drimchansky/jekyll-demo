@@ -60,11 +60,7 @@ collections:
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
+      - { label: 'Изображение', name: 'image', widget: 'image' }
       - { label: 'Title', name: 'title', widget: 'string', tagname: 'h1' }
+      - { label: 'Ссылка', name: 'slug', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
-      - {
-          label: 'Categories',
-          name: 'categories',
-          widget: 'string',
-          required: false,
-        }

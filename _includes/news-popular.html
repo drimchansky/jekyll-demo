@@ -9,6 +9,9 @@
 
     <div class="row">
       <div class="col-12">
+
+        {% for post in site.blog limit:3  %}
+
         <article class="news-item news-item__big">
           <div class="news-item__image-wrapper">
             <div>
@@ -16,7 +19,7 @@
             </div>
           </div>
           <div class="news-item__content">
-            <a href="/">Заголовок новости</a>
+            <a href="{{post.url}}">{{post.title}}</a>
             <p>По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых
               людей недоумение при попытках прочитать рыбу текст.</p>
             <div class="news-item__info">
@@ -39,6 +42,10 @@
             </div>
           </div>
         </article>
+
+        {% endfor %}
+
+
       </div>
     </div>
 
