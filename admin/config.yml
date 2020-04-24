@@ -29,6 +29,6 @@ collections:
             name: header
             widget: object
             fields:
-              - { label: Заголовок, title: title, widget: string }
-              - { label: Подзаголовок, subtitle: subtitle, widget: string }
+              - { label: Заголовок, name: title, widget: string }
+              - { label: Подзаголовок, name: subtitle, widget: string }
               - { label: Кнопка, name: button, widget: string }
