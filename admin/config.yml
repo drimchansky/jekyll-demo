@@ -27,4 +27,4 @@ collections:
         fields:
           - { label: Заголовок, name: title, widget: string }
           - { label: Подзаголовок, name: subtitle, widget: string }
-          - { label: Главная кнопка, name: button_text, widget: string }
+          - { label: Главная кнопка, name: button, widget: string }
