@@ -55,7 +55,7 @@ collections:
   - label: 'Новости'
     name: news
     create: true
-    folder: '_data/_news'
+    folder: '_data/_blog'
     sort: 'date:desc'
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
