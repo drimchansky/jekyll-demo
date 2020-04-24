@@ -17,4 +17,4 @@ collections:
           - { label: Логотип, name: logo_image, widget: image }
           - { label: Слоган, name: slogan, widget: string }
           - { label: Почта, name: email, widget: string }
-          - { label: Адрес, name: address, widget: strung }
+          - { label: Адрес, name: address, widget: string }
