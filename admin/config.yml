@@ -52,3 +52,19 @@ collections:
       - { label: Заголовок, name: title, widget: string }
       - { label: Описание, name: description, widget: string }
       - { label: 'Текст', name: 'body', widget: 'markdown' }
+  - label: 'Новости'
+    name: news
+    create: true
+    folder: '_data/_news'
+    sort: 'date:desc'
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    fields:
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
+      - { label: 'Title', name: 'title', widget: 'string', tagname: 'h1' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - {
+          label: 'Categories',
+          name: 'categories',
+          widget: 'string',
+          required: false,
+        }
