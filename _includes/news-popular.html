@@ -3,25 +3,24 @@
 
     <div class="row">
       <div class="caption caption_news">
-        <p>Популярные</p>
+        <p>Последнее</p>
       </div>
     </div>
 
     <div class="row">
       <div class="col-12">
 
-        {% for post in site.blog limit:3  %}
+        {% for post in site.blog limit:1  %}
 
         <article class="news-item news-item__big">
           <div class="news-item__image-wrapper">
             <div>
-              <img src="../assets/img/news-dump-image.jpg" alt="news image">
+              <img src="{{ post.image }}" alt="news image">
             </div>
           </div>
           <div class="news-item__content">
-            <a href="{{post.url}}">{{post.title}}</a>
-            <p>По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых
-              людей недоумение при попытках прочитать рыбу текст.</p>
+            <a href="{{ post.url }}">{{post.title}}</a>
+            <p>{{ post.desc or post.excerpt }} </p>
             <div class="news-item__info">
               <div class="news-item__meta">
                 <span>Имя автора</span>

@@ -2234,9 +2234,23 @@ sans-serif;
       min-width: 450px;
     }
 
+      @media (min-width: 768px) {
+
+    .news-item__big .news-item__image-wrapper {
+        max-width: 50%
+    }
+      }
+
     .news-item__big .news-item__content {
       position: relative;
     }
+
+      @media (min-width: 768px) {
+
+    .news-item__big .news-item__content {
+        width: 100%
+    }
+      }
     .news-item__big .news-item__info {
       width: 100%;
       position: absolute;

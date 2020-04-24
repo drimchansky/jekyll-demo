@@ -61,6 +61,7 @@ collections:
     fields:
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
       - { label: 'Изображение', name: 'image', widget: 'image' }
-      - { label: 'Title', name: 'title', widget: 'string', tagname: 'h1' }
+      - { label: 'Заголовок', name: 'title', widget: 'string', tagname: 'h1' }
+      - { label: 'Описание', name: 'desc', widget: 'string' }
       - { label: 'Ссылка', name: 'slug', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }

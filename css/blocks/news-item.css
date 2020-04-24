@@ -93,10 +93,18 @@
     & .news-item__image-wrapper {
       width: 140%;
       min-width: 450px;
+
+      @media (min-width: 768px) {
+        max-width: 50%;
+      }
     }
 
     & .news-item__content {
       position: relative;
+
+      @media (min-width: 768px) {
+        width: 100%;
+      }
     }
     & .news-item__info {
       width: 100%;
