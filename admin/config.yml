@@ -43,3 +43,12 @@ collections:
               - { label: Заголовок, name: title, widget: string }
               - { label: Подзаголовок, name: subtitle, widget: string }
               - { label: Кнопка, name: button, widget: string }
+  - label: 'Особенности'
+    name: features
+    folder: '_data/_features'
+    create: true
+    fields:
+      - { label: Картинка, name: image, widget: image }
+      - { label: Заголовок, name: title, widget: string }
+      - { label: Описание, name: description, widget: string }
+      - { label: 'Текст', name: 'body', widget: 'markdown' }
