@@ -1,2 +1,5 @@
 name: 'Diopside'
-logo_image: /assets/img/diamond.png
+a: 'текст'
+logo_image: '/assets/img/diamond.png'
+address: 'Котлас, Архангельская область, Россия'
+email: example@gmail.com
