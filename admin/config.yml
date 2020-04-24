@@ -25,6 +25,11 @@ collections:
         name: 'home'
         file: '_data/content/home.yml'
         fields:
-          - { label: Заголовок, name: title, widget: string }
-          - { label: Подзаголовок, name: subtitle, widget: string }
-          - { label: Главная кнопка, name: button, widget: string }
+          - label: Главный экран
+            name: first
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Заголовок, name: title, widget: string }
+              - { label: Подзаголовок, name: subtitle, widget: string }
+              - { label: Главная кнопка, name: button, widget: string }
