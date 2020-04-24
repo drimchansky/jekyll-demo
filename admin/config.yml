@@ -6,22 +6,15 @@ backend:
 media_folder: 'assets/uploads'
 
 collections:
-  - label: 'Основная инфмаорция'
-    name: 'info'
+  - label: 'Сайт'
+    name: 'general'
     files:
-      - label: 'Общее'
-        name: 'common'
-        file: '_data/general.yml'
+      - label: 'Общая информация'
+        name: 'site'
+        file: '_data/site.yml'
         fields:
-          - { label: 'Название', name: 'name', widget: 'string' }
-          - { label: 'Логотип', name: 'logo_image', widget: 'image' }
-          - { label: 'Почта', name: 'email', widget: 'string' }
-  # - label: Страницы
-  #   name: pages
-  #   files:
-  #     - label: Главная
-  #       name: home
-  #       file: '_data/_content/home.yml'
-  #       fields:
-  #         - { label: Заголовок, name: title, widget: string }
-  #         - { label: Подзаголовок, name: subtitle, widget: string }
+          - { label: Name, name: name, widget: string }
+          - { label: Логотип, name: logo_image, widget: image }
+          - { label: Слоган, name: slogan, widget: string }
+          - { label: Почта, name: email, widget: string }
+          - { label: Адрес, name: address, widget: strung }
