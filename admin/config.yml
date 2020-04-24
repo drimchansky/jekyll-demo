@@ -18,12 +18,23 @@ collections:
           - { label: Слоган, name: slogan, widget: string }
           - { label: Почта, name: email, widget: string }
           - { label: Адрес, name: address, widget: string }
-  - label: 'Страницы'
-    name: 'pages'
+  - label: 'Блоки'
+    name: blocks
     files:
-      - label: 'Главная'
-        name: 'home'
+      - label: 'Первый экран'
+        name: 'first_screen'
         file: '_data/content/home.yml'
+        fields:
+          - label: Шапка
+            name: header
+            widget: object
+            fields:
+              - { label: Заголовок, name: title, widget: string }
+              - { label: Подзаголовок, name: subtitle, widget: string }
+              - { label: Кнопка, name: button, widget: string }
+      - label: 'Футер'
+        name: 'footer'
+        file: '_data/content/footer.yml'
         fields:
           - label: Шапка
             name: header
