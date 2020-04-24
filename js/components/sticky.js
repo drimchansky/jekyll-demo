@@ -5,7 +5,6 @@
   window.onscroll = () => {
     if (window.pageYOffset > sticky) {
       header.classList.add('header_sticky')
-      console.log('sticky')
     } else {
       header.classList.remove('header_sticky')
     }

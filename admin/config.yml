@@ -1,0 +1,12 @@
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: 'assets/uploads'
+
+collections:
+  - label: 'Наши особенности'
+    name: features
+    folder: '_data/_features'
+    fields:
+      - { label: 'Имя', name: 'name', widget: 'string' }

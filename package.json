@@ -115,5 +115,8 @@
         "never"
       ]
     }
+  },
+  "dependencies": {
+    "lite-youtube-embed": "0.0.0"
   }
 }
