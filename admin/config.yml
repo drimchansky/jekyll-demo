@@ -1,5 +1,6 @@
 backend:
   name: git-gateway
+  repo: DRIMchansky/Diopside
   branch: master
 
 media_folder: 'assets/uploads'
