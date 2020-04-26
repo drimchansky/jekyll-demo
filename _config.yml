@@ -8,6 +8,8 @@ collections:
   blog:
     output: true
     permalink: /:collection/:slug
+  authors:
+    output: false
 
 defaults:
   - scope:

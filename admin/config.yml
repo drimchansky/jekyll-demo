@@ -18,6 +18,16 @@ collections:
           - { label: Слоган, name: slogan, widget: string }
           - { label: Почта, name: email, widget: string }
           - { label: Адрес, name: address, widget: string }
+  - label: 'Авторы'
+    name: 'authors'
+    folder: '_authors/'
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: 'Полное имя', name: 'name', widget: 'string' }
+      - { label: 'Отображаемое имя', name: 'display_name', widget: 'string' }
+      - { label: 'Position', name: 'position', widget: 'string' }
   - label: 'Блоки'
     name: blocks
     files:
@@ -74,6 +84,16 @@ collections:
           widget: 'string',
           tagname: 'h1',
           required: true,
+        }
+      - {
+          label: 'Автор',
+          name: 'author',
+          widget: 'relation',
+          collection: 'authors',
+          displayFields: [display_name],
+          searchFields: [display_name],
+          reauired: true,
+          valueField: 'name',
         }
       - { label: 'Описание', name: 'desc', widget: 'string', required: true }
       - { label: 'Ссылка', name: 'slug', widget: 'string', required: true }
