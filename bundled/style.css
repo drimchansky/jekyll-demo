@@ -1146,6 +1146,10 @@ hr {
 .container_all-news {
   padding-bottom: 2rem;
 }
+.container_rich img {
+    max-width: 80%;
+    margin: 0 auto;
+  }
 .front-screen {
   position: relative;
   display: flex;
@@ -2192,6 +2196,9 @@ sans-serif;
 .news-item__content p {
     font-size: 1rem;
     line-height: 1.2;
+    max-height: 240px;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 .news-item__info {
   justify-content: space-between;

@@ -35,3 +35,10 @@
 .container_all-news {
   padding-bottom: 2rem;
 }
+
+.container_rich {
+  & img {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
