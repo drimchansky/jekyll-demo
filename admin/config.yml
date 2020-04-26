@@ -60,8 +60,21 @@ collections:
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
-      - { label: 'Изображение', name: 'image', widget: 'image' }
-      - { label: 'Заголовок', name: 'title', widget: 'string', tagname: 'h1' }
-      - { label: 'Описание', name: 'desc', widget: 'string' }
-      - { label: 'Ссылка', name: 'slug', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Изображение', name: 'image', widget: 'image', required: true }
+      - {
+          label: 'Время публикации',
+          name: 'date',
+          widget: 'datetime',
+          default,
+          required: true,
+        }
+      - {
+          label: 'Заголовок',
+          name: 'title',
+          widget: 'string',
+          tagname: 'h1',
+          required: true,
+        }
+      - { label: 'Описание', name: 'desc', widget: 'string', required: true }
+      - { label: 'Ссылка', name: 'slug', widget: 'string', required: true }
+      - { label: 'Body', name: 'body', widget: 'markdown', required: true }
