@@ -71,7 +71,12 @@ collections:
     fields:
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
       - { label: 'Изображение', name: 'image', widget: 'image', required: true }
-      - { label: 'Время публикации', name: 'date', widget: 'datetime', default }
+      - label: 'Дата публикации'
+        name: date
+        widget: 'datetime'
+        default: default
+        dateFormat: 'DD.MM.YYYY' # e.g. 24.12.2021
+        timeFormat: 'HH:mm' # e.g. 21:07
       - {
           label: 'Заголовок',
           name: 'title',
