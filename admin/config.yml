@@ -71,13 +71,7 @@ collections:
     fields:
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
       - { label: 'Изображение', name: 'image', widget: 'image', required: true }
-      - {
-          label: 'Время публикации',
-          name: 'date',
-          widget: 'datetime',
-          default,
-          required: true,
-        }
+      - { label: 'Время публикации', name: 'date', widget: 'datetime', default }
       - {
           label: 'Заголовок',
           name: 'title',
