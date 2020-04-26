@@ -77,7 +77,6 @@ collections:
         default: default
         dateFormat: 'DD.MM.YYYY' # e.g. 24.12.2021
         timeFormat: 'HH:mm' # e.g. 21:07
-        format: 'DD-MM-YYYY HH:mm'
       - {
           label: 'Заголовок',
           name: 'title',
