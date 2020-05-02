@@ -24,8 +24,8 @@
             <p>{{ post.desc  }} </p>
             <div class="news-item__info">
               <div class="news-item__meta">
-                <span>Имя автора</span>
-                <small>5 апреля</small>
+                <span>{{ post.author }}</span>
+                <small>{{ post.date | localize: "%d %B %Y" }}</small>
               </div>
               <div class="news-item__actions">
                 <button>
@@ -69,8 +69,8 @@
             <p>{{ post.desc }}</p>
             <div class="news-item__info">
               <div class="news-item__meta">
-                <span>Имя автора</span>
-                <small>5 апреля</small>
+                <span>{{ post.author }}</span>
+                <small>{{ post.date | localize: "%d %B %Y" }}</small>
               </div>
               <div class="news-item__actions">
                 <button>
