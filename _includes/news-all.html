@@ -8,21 +8,24 @@
     </div>
 
     <div class="row">
+
+      {% assign posts = site.blog | reverse %}
+      {% for post in posts %}
+
       <div class="col-12">
         <article class="news-item news-item__horizontal">
           <div class="news-item__image-wrapper">
             <div>
-              <img src="../assets/img/news-dump-image.jpg" alt="news image">
+              <img src="{{ post.image }}" alt="news image">
             </div>
           </div>
           <div class="news-item__content">
-            <a href="/">Заголовок новости</a>
-            <p>По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых
-              людей недоумение при попытках прочитать рыбу текст.</p>
+            <a href="{{ post.url }}">{{post.title}}</a>
+            <p>{{ post.desc }}</p>
             <div class="news-item__info">
               <div class="news-item__meta">
-                <span>Имя автора</span>
-                <small>5 апреля</small>
+                <span>{{ post.author }}</span>
+                <small>{{ post.date | localize: "%d %B %Y" }}</small>
               </div>
               <div class="news-item__actions">
                 <button>
@@ -40,135 +43,9 @@
           </div>
         </article>
       </div>
-      <div class="col-12">
-        <article class="news-item news-item__horizontal">
-          <div class="news-item__image-wrapper">
-            <div>
-              <img src="../assets/img/news-dump-image.jpg" alt="news image">
-            </div>
-          </div>
-          <div class="news-item__content">
-            <a href="/">Заголовок новости</a>
-            <p>По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых
-              людей недоумение при попытках прочитать рыбу текст.</p>
-            <div class="news-item__info">
-              <div class="news-item__meta">
-                <span>Имя автора</span>
-                <small>5 апреля</small>
-              </div>
-              <div class="news-item__actions">
-                <button>
-                  <svg>
-                    <use xlink:href="../assets/icons/bookmark.svg#bookmark"></use>
-                  </svg>
-                </button>
-                <button>
-                  <svg>
-                    <use xlink:href="../assets/icons/share.svg#share"></use>
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
-        </article>
-      </div>
-      <div class="col-12">
-        <article class="news-item news-item__horizontal">
-          <div class="news-item__image-wrapper">
-            <div>
-              <img src="../assets/img/news-dump-image.jpg" alt="news image">
-            </div>
-          </div>
-          <div class="news-item__content">
-            <a href="/">Заголовок новости</a>
-            <p>По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых
-              людей недоумение при попытках прочитать рыбу текст.</p>
-            <div class="news-item__info">
-              <div class="news-item__meta">
-                <span>Имя автора</span>
-                <small>5 апреля</small>
-              </div>
-              <div class="news-item__actions">
-                <button>
-                  <svg>
-                    <use xlink:href="../assets/icons/bookmark.svg#bookmark"></use>
-                  </svg>
-                </button>
-                <button>
-                  <svg>
-                    <use xlink:href="../assets/icons/share.svg#share"></use>
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
-        </article>
-      </div>
-      <div class="col-12">
-        <article class="news-item news-item__horizontal">
-          <div class="news-item__image-wrapper">
-            <div>
-              <img src="../assets/img/news-dump-image.jpg" alt="news image">
-            </div>
-          </div>
-          <div class="news-item__content">
-            <a href="/">Заголовок новости</a>
-            <p>По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых
-              людей недоумение при попытках прочитать рыбу текст.</p>
-            <div class="news-item__info">
-              <div class="news-item__meta">
-                <span>Имя автора</span>
-                <small>5 апреля</small>
-              </div>
-              <div class="news-item__actions">
-                <button>
-                  <svg>
-                    <use xlink:href="../assets/icons/bookmark.svg#bookmark"></use>
-                  </svg>
-                </button>
-                <button>
-                  <svg>
-                    <use xlink:href="../assets/icons/share.svg#share"></use>
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
-        </article>
-      </div>
-      <div class="col-12">
-        <article class="news-item news-item__horizontal">
-          <div class="news-item__image-wrapper">
-            <div>
-              <img src="../assets/img/news-dump-image.jpg" alt="news image">
-            </div>
-          </div>
-          <div class="news-item__content">
-            <a href="/">Заголовок новости</a>
-            <p>По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых
-              людей недоумение при попытках прочитать рыбу текст.</p>
-            <div class="news-item__info">
-              <div class="news-item__meta">
-                <span>Имя автора</span>
-                <small>5 апреля</small>
-              </div>
-              <div class="news-item__actions">
-                <button>
-                  <svg>
-                    <use xlink:href="../assets/icons/bookmark.svg#bookmark"></use>
-                  </svg>
-                </button>
-                <button>
-                  <svg>
-                    <use xlink:href="../assets/icons/share.svg#share"></use>
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
 
+      {% endfor %}
+
+    </div>
   </div>
 </section>

@@ -1,0 +1,16 @@
+.link {
+  color: var(--c-regular);
+  text-decoration: none;
+  transition: color 0.2s;
+  display: block;
+
+  &:hover {
+    color: var(--c-light);
+  }
+}
+
+.link_news {
+  width: fit-content;
+  padding: 0.5rem;
+  margin: 1rem 0 2rem auto;
+}

@@ -21,7 +21,7 @@
           </div>
           <div class="news-item__content">
             <a href="{{ post.url }}">{{post.title}}</a>
-            <p>{{ post.desc  }} </p>
+            <p>{{ post.desc }}</p>
             <div class="news-item__info">
               <div class="news-item__meta">
                 <span>{{ post.author }}</span>
@@ -91,6 +91,10 @@
 
       {% endfor %}
 
+    </div>
+
+    <div class="row">
+      <a class="link link_news" href="/news-all">Все новости</a>
     </div>
 
   </div>
