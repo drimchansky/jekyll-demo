@@ -2319,6 +2319,16 @@ sans-serif;
     .news-item__vertical .news-item__image-wrapper {
       height: auto;
     }
+
+    .news-item__vertical .news-item__content {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .news-item__vertical .news-item__info {
+      margin-top: auto;
+    }
   }
 .map-wrapper {
   padding: 2rem 10px;
