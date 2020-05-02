@@ -37,8 +37,25 @@
 }
 
 .container_rich {
+  padding: 2rem 10px;
+  max-width: 1000px;
+
+  & h1 {
+    margin-bottom: 0.5rem;
+  }
+
+  & p {
+    margin-top: 1.5rem;
+  }
+
+  & small {
+    color: var(--c-darker);
+    margin-right: 0.4rem;
+  }
+
   & img {
     max-width: 80%;
     margin: 0 auto;
+    display: block;
   }
 }

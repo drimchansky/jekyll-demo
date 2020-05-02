@@ -1146,9 +1146,25 @@ hr {
 .container_all-news {
   padding-bottom: 2rem;
 }
+.container_rich {
+  padding: 2rem 10px;
+  max-width: 1000px;
+}
+.container_rich h1 {
+    margin-bottom: 0.5rem;
+  }
+.container_rich p {
+    margin-top: 1.5rem;
+  }
+.container_rich small {
+    color: #316099;
+    color: var(--c-darker);
+    margin-right: 0.4rem;
+  }
 .container_rich img {
     max-width: 80%;
     margin: 0 auto;
+    display: block;
   }
 .front-screen {
   position: relative;
