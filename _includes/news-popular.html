@@ -11,37 +11,38 @@
       <div class="col-12">
 
         {% assign posts = site.blog | reverse %}
-        {% for post in posts limit:1 %}
+        {% for post in posts limit : 1 %}
 
-        <article class="news-item news-item__big">
-          <div class="news-item__image-wrapper">
-            <div>
-              <img src="{{ post.image }}" alt="news image">
-            </div>
-          </div>
-          <div class="news-item__content">
-            <a href="{{ post.url }}">{{post.title}}</a>
-            <p>{{ post.desc }}</p>
-            <div class="news-item__info">
-              <div class="news-item__meta">
-                <span>{{ post.author }}</span>
-                <small>{{ post.date | localize: "%d %B %Y" }}</small>
-              </div>
-              <div class="news-item__actions">
-                <button>
-                  <svg>
-                    <use xlink:href="../assets/icons/bookmark.svg#bookmark"></use>
-                  </svg>
-                </button>
-                <button>
-                  <svg>
-                    <use xlink:href="../assets/icons/share.svg#share"></use>
-                  </svg>
-                </button>
+          <article class="news-item news-item__big">
+            <div class="news-item__image-wrapper">
+              <div>
+                <img class="lazyload blur-up" src="../assets/img/gray.jpg" data-src="{{ post.image }}" alt="news image">
+                <noscript><img src="{{ post.image }}" alt="news image"></noscript>
               </div>
             </div>
-          </div>
-        </article>
+            <div class="news-item__content">
+              <a href="{{ post.url }}">{{post.title}}</a>
+              <p>{{ post.desc }}</p>
+              <div class="news-item__info">
+                <div class="news-item__meta">
+                  <span>{{ post.author }}</span>
+                  <small>{{ post.date | localize: "%d %B %Y" }}</small>
+                </div>
+                <div class="news-item__actions">
+                  <button>
+                    <svg>
+                      <use xlink:href="../assets/icons/bookmark.svg#bookmark"></use>
+                    </svg>
+                  </button>
+                  <button>
+                    <svg>
+                      <use xlink:href="../assets/icons/share.svg#share"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
 
         {% endfor %}
 
@@ -51,43 +52,44 @@
     <div class="row">
 
       {% assign posts = site.blog | reverse %}
-      {% for post in posts limit:4 %}
+      {% for post in posts limit : 4 %}
 
-      {% if post == posts.first %}
-      {% continue %}
-      {% endif %}
+        {% if post == posts.first %}
+          {% continue %}
+        {% endif %}
 
-      <div class="col-12 col-sm-6 col-md-4">
-        <article class="news-item news-item__vertical">
-          <div class="news-item__image-wrapper">
-            <div>
-              <img src="{{ post.image }}?nf_resize=fit&h=300" alt="news image">
-            </div>
-          </div>
-          <div class="news-item__content">
-            <a href="{{ post.url }}">{{ post.title }}</a>
-            <p>{{ post.desc }}</p>
-            <div class="news-item__info">
-              <div class="news-item__meta">
-                <span>{{ post.author }}</span>
-                <small>{{ post.date | localize: "%d %B %Y" }}</small>
-              </div>
-              <div class="news-item__actions">
-                <button>
-                  <svg>
-                    <use xlink:href="../assets/icons/bookmark.svg#bookmark"></use>
-                  </svg>
-                </button>
-                <button>
-                  <svg>
-                    <use xlink:href="../assets/icons/share.svg#share"></use>
-                  </svg>
-                </button>
+        <div class="col-12 col-sm-6 col-md-4">
+          <article class="news-item news-item__vertical">
+            <div class="news-item__image-wrapper">
+              <div>
+                <img class="lazyload blur-up" src="../assets/img/gray.jpg" data-src="{{ post.image }}?nf_resize=fit&h=300" alt="news image">
+                <noscript><img src="{{ post.image }}" alt="news image"></noscript>
               </div>
             </div>
-          </div>
-        </article>
-      </div>
+            <div class="news-item__content">
+              <a href="{{ post.url }}">{{ post.title }}</a>
+              <p>{{ post.desc }}</p>
+              <div class="news-item__info">
+                <div class="news-item__meta">
+                  <span>{{ post.author }}</span>
+                  <small>{{ post.date | localize: "%d %B %Y" }}</small>
+                </div>
+                <div class="news-item__actions">
+                  <button>
+                    <svg>
+                      <use xlink:href="../assets/icons/bookmark.svg#bookmark"></use>
+                    </svg>
+                  </button>
+                  <button>
+                    <svg>
+                      <use xlink:href="../assets/icons/share.svg#share"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
 
       {% endfor %}
 

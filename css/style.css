@@ -3,6 +3,7 @@
 @import './fonts.css';
 @import './grid.css';
 @import './general.css';
+@import './lazyload.css';
 @import './blocks/container.css';
 @import './blocks/front-screen.css';
 @import './blocks/header.css';
