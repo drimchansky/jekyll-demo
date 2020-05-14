@@ -4,17 +4,27 @@ const babel = require('gulp-babel')
 const terser = require('gulp-terser')
 const browserSync = require('browser-sync').create()
 const browserify = require('gulp-browserify')
-const print = require('gulp-print')
 const del = require('del')
-const rev = require('gulp-rev')
-const revRewrite = require('gulp-rev-rewrite')
-const paths = require('vinyl-paths')
+const rename = require('gulp-rename')
+
+// Config
+
+const config = {
+  root: './',
+  port: 4000,
+  stylesSrc: 'css/style.css',
+  styleDestName: 'style.css',
+  styleDestPath: 'bundled',
+  jsSrc: 'js/scripts.js',
+  jsDistPath: 'bundled',
+  jsDistName: 'scripts.js',
+}
 
 // Styles
 
 gulp.task('styles', () => {
   return gulp
-    .src('css/style.css')
+    .src(`${config.root}css/style.css`)
     .pipe(
       postcss([
         require('postcss-import'),
@@ -24,14 +34,15 @@ gulp.task('styles', () => {
         require('postcss-custom-properties'),
       ]),
     )
-    .pipe(gulp.dest('bundled'))
+    .pipe(rename(config.styleDestName))
+    .pipe(gulp.dest(config.root + config.styleDestPath))
 })
 
 // Scripts
 
 gulp.task('scripts', () => {
   return gulp
-    .src('js/scripts.js')
+    .src(config.jsSrc)
     .pipe(
       babel({
         presets: ['@babel/preset-env'],
@@ -39,7 +50,8 @@ gulp.task('scripts', () => {
     )
     .pipe(browserify())
     .pipe(terser())
-    .pipe(gulp.dest('bundled'))
+    .pipe(rename(config.jsDistName))
+    .pipe(gulp.dest(config.jsDistPath))
 })
 
 // Clean
@@ -53,24 +65,26 @@ gulp.task('clean', () => {
 gulp.task('watch', function() {
   browserSync.init({
     notify: true,
-    proxy: 'localhost:4000',
+    proxy: `localhost:${config.port}`,
   })
 
-  gulp.watch('./css/**/*.css', gulp.series('waitForStyles'))
-  gulp.watch('./js/**/*.js', gulp.series('waitForScripts'))
+  gulp.watch(`${config.root}css/**/*.css`, gulp.series('waitForStyles'))
+  gulp.watch(`${config.root}js/**/*.js`, gulp.series('waitForScripts'))
 })
 
 gulp.task(
   'waitForStyles',
   gulp.series('styles', function() {
-    return gulp.src('bundled/style.css').pipe(browserSync.stream())
+    return gulp
+      .src(config.styleDestPath + '/' + config.styleDestName)
+      .pipe(browserSync.stream())
   }),
 )
 gulp.task(
   'waitForScripts',
   gulp.series('scripts', function() {
     return gulp
-      .src('bundled/scripts.js', { allowEmpty: true })
+      .src(config.jsDistPath + '/' + config.jsDistName, { allowEmpty: true })
       .pipe(browserSync.stream())
   }),
 )
