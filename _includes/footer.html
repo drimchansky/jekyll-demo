@@ -23,7 +23,9 @@
 
         <ul>
           {% for p in site.data.navigation %}
-          <li><a href="{{p.url}}">{{p.name}}</a></li>
+            <li>
+              <a href="{{p.url}}">{{p.name}}</a>
+            </li>
           {% endfor %}
         </ul>
 
@@ -31,18 +33,27 @@
       <div class="footer__list">
         <span>Социальные сети</span>
         <ul>
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">Lined In</a></li>
-          <li><a href="#">YouTube</a></li>
+          <li>
+            <a href="#">Instagram</a>
+          </li>
+          <li>
+            <a href="#">Facebook</a>
+          </li>
+          <li>
+            <a href="#">Lined In</a>
+          </li>
+          <li>
+            <a href="#">YouTube</a>
+          </li>
         </ul>
       </div>
     </div>
 
   </div>
 
-  <div class="footer__copy"><span>Powered on Jekyll by DRIMchansky</span></div>
+  <div class="footer__copy">
+    <span>Powered on Jekyll by DRIMchansky</span></div>
 
 </footer>
 
-<script src="../bundled/scripts-bundled.js"></script>
+<script src="../bundled/scripts.js"></script>
