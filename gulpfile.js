@@ -42,9 +42,11 @@ gulp.task('scripts', () => {
     .pipe(gulp.dest('bundled'))
 })
 
-// Build
+// Clean
 
-// gulp.task('build', gulp.series('styles', 'scripts'))
+gulp.task('clean', () => {
+  return del(['_site'])
+})
 
 // Watch
 
