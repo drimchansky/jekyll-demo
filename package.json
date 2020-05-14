@@ -9,7 +9,7 @@
     "lint-fix": "node -e console.clear() && stylelint ./css/**/*.css --fix",
     "dev": "concurrently \"gulp watch\" \"bundle exec jekyll serve\"",
     "prev": "bundle exec jekyll serve",
-    "build": "bundle exec jekyll build"
+    "build": "gulp images && bundle exec jekyll build --incremental"
   },
   "author": "",
   "license": "ISC",
@@ -33,6 +33,7 @@
     "gulp-babel": "^8.0.0",
     "gulp-browserify": "^0.5.1",
     "gulp-cli": "^2.2.0",
+    "gulp-imagemin": "^7.1.0",
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^2.0.0",
     "gulp-sourcemaps": "^2.6.5",

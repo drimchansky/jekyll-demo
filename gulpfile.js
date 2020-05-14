@@ -6,6 +6,7 @@ const browserSync = require('browser-sync').create()
 const browserify = require('gulp-browserify')
 const del = require('del')
 const rename = require('gulp-rename')
+const imagemin = require('gulp-imagemin')
 
 // Config
 
@@ -18,6 +19,7 @@ const config = {
   jsSrc: 'js/scripts.js',
   jsDistPath: 'bundled',
   jsDistName: 'scripts.js',
+  imagesPath: 'assets/uploads',
 }
 
 // Styles
@@ -52,6 +54,21 @@ gulp.task('scripts', () => {
     .pipe(terser())
     .pipe(rename(config.jsDistName))
     .pipe(gulp.dest(config.jsDistPath))
+})
+
+// Images
+
+gulp.task('images', () => {
+  return gulp
+    .src(`${config.imagesPath}/*`)
+    .pipe(
+      imagemin([
+        imagemin.gifsicle({ interlaced: true }),
+        imagemin.mozjpeg({ quality: 75, progressive: true }),
+        imagemin.optipng({ optimizationLevel: 5 }),
+      ]),
+    )
+    .pipe(gulp.dest(config.imagesPath))
 })
 
 // Clean
