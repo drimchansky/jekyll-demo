@@ -1,12 +1,8 @@
 {
-  "name": "Diopside",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "prettier": "prettier",
-    "lint": "node -e console.clear() && stylelint ./css/**/*.css",
-    "lint-fix": "node -e console.clear() && stylelint ./css/**/*.css --fix",
+    "lint:css": "stylelint \"site/css/**/*.css\" --fix && prettier \"site/css/**/*.css\" --write ",
     "dev": "concurrently \"gulp watch\" \"cd site && bundle exec jekyll serve\"",
     "prev": "cd site && bundle exec jekyll serve",
     "build": "gulp images && cd site && bundle exec jekyll build"
@@ -45,78 +41,6 @@
     "postcss-nested": "^4.1.2",
     "prettier": "^1.19.1",
     "stylelint": "^12.0.0",
-    "stylelint-config-recess-order": "^2.0.4",
-    "stylelint-config-standard": "^19.0.0"
-  },
-  "postcss": {
-    "modules": false,
-    "plugins": {
-      "autoprefixer": {
-        "grid": true
-      },
-      "postcss-nested": {},
-      "postcss-custom-properties": {
-        "preserve": true,
-        "importFrom": "./css/properties.css"
-      }
-    }
-  },
-  "eslintIgnore": [
-    "node_modules",
-    "dist",
-    ".cache",
-    "gulpfile.js"
-  ],
-  "stylelint": {
-    "plugins": [
-      "stylelint-order"
-    ],
-    "rules": {
-      "value-list-comma-newline-after": [
-        "always"
-      ],
-      "declaration-block-trailing-semicolon": null,
-      "block-closing-brace-newline-before": null,
-      "block-opening-brace-space-before": null
-    },
-    "extends": [
-      "stylelint-config-standard",
-      "stylelint-config-recess-order"
-    ]
-  },
-  "prettier": {
-    "semi": false,
-    "trailingComma": "all",
-    "singleQuote": true,
-    "printWidth": 85
-  },
-  "eslintConfig": {
-    "env": {
-      "browser": true,
-      "es6": true
-    },
-    "extends": [
-      "airbnb-base",
-      "prettier"
-    ],
-    "plugins": [
-      "prettier"
-    ],
-    "rules": {
-      "prettier/prettier": [
-        "error"
-      ],
-      "linebreak-style": 0,
-      "no-console": "off",
-      "indent": [
-        "error",
-        2
-      ],
-      "import/prefer-default-export": "off",
-      "semi": [
-        2,
-        "never"
-      ]
-    }
+    "stylelint-config-recess-order": "^2.0.4"
   }
 }

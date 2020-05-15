@@ -1,8 +1,8 @@
 .link {
+  display: block;
   color: var(--c-regular);
   text-decoration: none;
   transition: color 0.2s;
-  display: block;
 
   &:hover {
     color: var(--c-light);

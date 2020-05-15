@@ -1,6 +1,6 @@
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -14,14 +14,15 @@ html {
   @media (min-width: 576px) {
     font-size: 18px;
   }
+
   @media (min-width: 1200px) {
     font-size: 20px;
   }
 }
 
 body {
-  height: 100%;
   position: relative;
+  height: 100%;
 }
 
 body.is-open {
@@ -29,6 +30,6 @@ body.is-open {
 }
 
 hr {
-  background: var(--c-light);
   margin: 1rem 0;
+  background: var(--c-light);
 }

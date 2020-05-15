@@ -1,6 +1,6 @@
 .contacts-info {
-  color: var(--c-regular);
   flex: 1;
+  color: var(--c-regular);
 
   & p {
     padding: 0.5rem;
@@ -36,9 +36,9 @@
 
 .contacts-info__title {
   display: block;
+  margin: 1rem 0;
   font-size: 1.3rem;
   font-weight: bold;
-  margin: 1rem 0;
 }
 
 .contacts-info__wrap {
@@ -46,15 +46,15 @@
   align-items: center;
 
   & svg {
-    height: 24px;
     width: 24px;
+    height: 24px;
     fill: var(--c-regular);
   }
 
   & p {
     display: inline-block;
     margin: 0;
-    line-height: 100%;
     margin-left: 13px;
+    line-height: 100%;
   }
 }
