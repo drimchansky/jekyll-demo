@@ -1,5 +1,5 @@
 @import './properties.css';
-@import '../node_modules/normalize.css/normalize.css';
+@import '../../node_modules/normalize.css/normalize.css';
 @import './fonts.css';
 @import './grid.css';
 @import './general.css';

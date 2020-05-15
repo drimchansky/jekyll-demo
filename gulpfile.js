@@ -11,13 +11,13 @@ const imagemin = require('gulp-imagemin')
 // Config
 
 const config = {
-  root: './',
+  root: 'site/',
   port: 4000,
   stylesSrc: 'css/style.css',
   styleDestName: 'style.css',
-  styleDestPath: 'bundled',
+  styleDestPath: 'bundled/',
   jsSrc: 'js/scripts.js',
-  jsDistPath: 'bundled',
+  jsDistPath: 'bundled/',
   jsDistName: 'scripts.js',
   imagesPath: 'assets/uploads',
 }
@@ -44,7 +44,7 @@ gulp.task('styles', () => {
 
 gulp.task('scripts', () => {
   return gulp
-    .src(config.jsSrc)
+    .src(config.root + config.jsSrc)
     .pipe(
       babel({
         presets: ['@babel/preset-env'],
@@ -53,7 +53,7 @@ gulp.task('scripts', () => {
     .pipe(browserify())
     .pipe(terser())
     .pipe(rename(config.jsDistName))
-    .pipe(gulp.dest(config.jsDistPath))
+    .pipe(gulp.dest(config.root + config.jsDistPath))
 })
 
 // Images
@@ -91,17 +91,17 @@ gulp.task('watch', function() {
 
 gulp.task(
   'waitForStyles',
-  gulp.series('styles', function() {
+  gulp.series('styles', () => {
     return gulp
-      .src(config.styleDestPath + '/' + config.styleDestName)
+      .src(config.root + config.styleDestPath + config.styleDestName)
       .pipe(browserSync.stream())
   }),
 )
 gulp.task(
   'waitForScripts',
-  gulp.series('scripts', function() {
+  gulp.series('scripts', () => {
     return gulp
-      .src(config.jsDistPath + '/' + config.jsDistName, { allowEmpty: true })
-      .pipe(browserSync.stream())
+      .src(config.root + config.jsDistPath + config.jsDistName, { allowEmpty: true })
+      .pipe(browserSync.reload())
   }),
 )
