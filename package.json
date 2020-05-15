@@ -7,8 +7,6 @@
     "prev": "cd site && bundle exec jekyll serve",
     "build": "gulp images && cd site && bundle exec jekyll build"
   },
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
@@ -42,5 +40,8 @@
     "prettier": "^1.19.1",
     "stylelint": "^12.0.0",
     "stylelint-config-recess-order": "^2.0.4"
+  },
+  "dependencies": {
+    "quicklink": "^2.0.0"
   }
 }

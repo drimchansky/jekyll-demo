@@ -4,7 +4,6 @@
   padding: 1rem;
   font-size: 16px;
   text-decoration: none;
-  background: var(--c-medium);
 
   @media (min-width: 768px) {
     font-size: 18px;
