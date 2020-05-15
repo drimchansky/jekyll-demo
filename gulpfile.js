@@ -60,7 +60,7 @@ gulp.task('scripts', () => {
 
 gulp.task('images', () => {
   return gulp
-    .src(`${config.imagesPath}/*`)
+    .src(config.root + config.imagesPath)
     .pipe(
       imagemin([
         imagemin.gifsicle({ interlaced: true }),
@@ -68,7 +68,7 @@ gulp.task('images', () => {
         imagemin.optipng({ optimizationLevel: 5 }),
       ]),
     )
-    .pipe(gulp.dest(config.imagesPath))
+    .pipe(gulp.dest(config.root + config.imagesPath))
 })
 
 // Clean
