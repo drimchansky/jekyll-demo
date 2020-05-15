@@ -1,7 +1,7 @@
 .cards {
-  color: var(--c-regular);
-  padding: 3rem 0;
   position: relative;
+  padding: 3rem 0;
+  color: var(--c-regular);
 
   @media (min-width: 998px) {
     padding-bottom: 8rem;
@@ -9,14 +9,14 @@
 }
 
 .cards__header {
-  font-size: 2em;
   max-width: 17em;
   font-family: var(--f-title);
+  font-size: 2em;
 
   @media (min-width: 992px) {
-    font-size: 3em;
     position: absolute;
     max-width: 10em;
+    font-size: 3em;
   }
 }
 
@@ -34,19 +34,18 @@
 }
 
 .cards__item {
-  margin: 300px 1rem 0 1rem;
-  padding: 0 2.5em 3.2em 2.5em;
   max-width: 380px;
-  box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px,
-    rgba(15, 15, 15, 0.1) 0px 2px 4px;
+  padding: 0 2.5em 3.2em 2.5em;
+  margin: 300px 1rem 0 1rem;
+  box-shadow: rgba(15, 15, 15, 0.1) 0 0 0 1px, rgba(15, 15, 15, 0.1) 0 2px 4px;
   transition: box-shadow 0.2s;
 
   @supports (grid-auto-flow: dense) {
     grid-column: span 3;
     justify-self: center;
+    margin-top: 4em;
     margin-right: 0;
     margin-left: 0;
-    margin-top: 4em;
   }
 
   &:hover,
@@ -81,9 +80,9 @@
 }
 
 .cards__title {
+  font-family: var(--f-title);
   font-size: 1.1em;
   font-weight: bold;
-  font-family: var(--f-title);
 }
 
 .cards__description {
@@ -92,10 +91,10 @@
 }
 
 .cards__link {
-  font-size: 1.1em;
-  text-decoration: none;
-  color: var(--c-light);
-  margin-top: 2em;
   display: block;
+  margin-top: 2em;
+  font-size: 1.1em;
   font-weight: bold;
+  color: var(--c-light);
+  text-decoration: none;
 }

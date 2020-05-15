@@ -1,8 +1,8 @@
 .footer {
+  font-size: 16px;
+  color: white;
   background: var(--c-darker);
   border-radius: 0 200px 0 0;
-  color: white;
-  font-size: 16px;
 
   @media (min-width: 998px) {
     margin-right: 5vw;
@@ -10,26 +10,26 @@
 }
 
 .footer__inner {
-  padding: 2rem 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0;
 
   &_bottom {
+    position: relative;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-start;
     align-items: center;
-    position: relative;
+    justify-content: flex-start;
 
-    &:before {
-      content: '';
+    &::before {
       position: absolute;
-      height: 1px;
       top: 0;
       right: 0;
       left: -100%;
+      height: 1px;
+      content: '';
       background: white;
       opacity: 0.4;
     }
@@ -40,8 +40,8 @@
   }
 
   @media (min-width: 998px) {
-    padding: 4rem 0;
     flex-direction: row;
+    padding: 4rem 0;
   }
 }
 
@@ -51,10 +51,10 @@
   padding-left: 10px;
 
   & h6 {
-    font-size: 1.5rem;
     max-width: 80%;
     margin: 1rem 0 2rem 0;
     font-family: var(--f-title);
+    font-size: 1.5rem;
 
     @media (min-width: 768px) {
       max-width: 500px;
@@ -80,15 +80,15 @@
 }
 
 .footer__info-item {
-  font-size: 1rem;
   max-width: 500px;
   padding: 10px 1.3em;
+  font-size: 1rem;
 
-  &:before {
-    content: attr(data-letter);
+  &::before {
+    margin-right: 5px;
     font-size: 1.1rem;
     font-weight: bold;
-    margin-right: 5px;
+    content: attr(data-letter);
   }
 }
 
@@ -96,9 +96,9 @@
   padding: 1.3em 2em;
 
   & span {
+    font-family: var(--f-title);
     font-size: 1.3em;
     font-weight: bold;
-    font-family: var(--f-title);
   }
 
   & ul {
@@ -117,11 +117,11 @@
 
   & a {
     display: block;
-    text-decoration: none;
-    color: white;
-    font-size: 1em;
     padding: 0.5em;
     padding-left: 0;
+    font-size: 1em;
+    color: white;
+    text-decoration: none;
     transition: opacity 0.2s;
 
     &:hover {
@@ -131,10 +131,10 @@
 }
 
 .footer__copy {
+  padding: 5px 0;
+  font-size: 1rem;
   text-align: center;
   opacity: 0.75;
-  font-size: 1rem;
-  padding: 5px 0;
 }
 
 .footer .logo {

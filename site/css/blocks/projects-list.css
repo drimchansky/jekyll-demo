@@ -2,26 +2,26 @@
   display: flex;
   flex-direction: column;
   max-width: 1000px;
-  margin: 0 1rem;
   padding: 0;
   padding-bottom: 2rem;
+  margin: 0 1rem;
 
   @media (min-width: 768px) {
-    margin: 0 auto;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     padding-bottom: 4rem;
+    margin: 0 auto;
   }
 }
 
 .projects-list__item {
-  border-radius: 10px;
+  overflow: hidden;
   list-style-type: none;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  overflow: hidden;
+  border-radius: 10px;
 
   @media (min-width: 768px) {
     width: 47%;
@@ -43,7 +43,7 @@
         padding-bottom: 40%;
       }
 
-      &:before {
+      &::before {
         background: linear-gradient(
           89.97deg,
           #1f3f68 3.62%,
@@ -66,29 +66,29 @@
   width: 100%;
   padding-bottom: 100%;
 
-  &:before {
-    content: '';
+  &::before {
     position: absolute;
-    left: 0;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    border-radius: 10px;
+    content: '';
     background: linear-gradient(
       309.18deg,
       rgba(66, 165, 245, 0.4) -1.71%,
       rgba(21, 101, 192, 0.6) 74.54%
     );
+    border-radius: 10px;
   }
 }
 
 .projects-list__image-placeholder {
-  z-index: -1;
   position: absolute;
-  left: 0;
   top: 0;
-  height: 100%;
+  left: 0;
+  z-index: -1;
   width: 100%;
+  height: 100%;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -97,10 +97,10 @@
 
 .projects-list__inner {
   position: absolute;
-  left: 0;
   top: 0;
-  height: 100%;
+  left: 0;
   width: 100%;
+  height: 100%;
   border-radius: 10px;
 }
 
@@ -109,15 +109,15 @@
   color: white;
 
   & h4 {
+    margin: 0;
     font-size: 1.4rem;
     font-weight: bold;
-    margin: 0;
   }
 
   & span {
     display: block;
-    font-size: 1.1rem;
     margin-top: 0.5rem;
+    font-size: 1.1rem;
     opacity: 0.9;
   }
 }

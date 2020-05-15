@@ -1,8 +1,8 @@
 .fake-header {
-  height: 80px;
   display: none;
+  height: 80px;
 
-    @media (min-width: 768px) {
+  @media (min-width: 768px) {
     display: block;
     height: 80px;
   }
@@ -10,17 +10,17 @@
 
 .header {
   width: 100%;
-  font-size: 16px;
   height: 80px;
+  font-size: 16px;
 
   @media (min-width: 768px) {
     position: fixed;
-    margin: 0 auto;
-    display: flex;
-    background: white;
-    z-index: 10;
-    transition: height 0.2s;
     top: 0;
+    z-index: 10;
+    display: flex;
+    margin: 0 auto;
+    background: white;
+    transition: height 0.2s;
   }
 }
 
@@ -28,9 +28,8 @@
   @media (min-width: 768px) {
     position: fixed;
     top: 0;
-    height: 50px;
-
     max-width: none;
+    height: 50px;
     box-shadow: 0 0 8px black;
   }
 }

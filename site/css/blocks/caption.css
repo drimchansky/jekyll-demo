@@ -9,20 +9,20 @@
   }
 
   & h3 {
-    font-size: 2.2rem;
     margin-bottom: 0;
     font-family: var(--f-title);
+    font-size: 2.2rem;
 
     @media (min-width: 992px) {
       padding-left: 2rem;
-      font-size: 3rem;
       margin: 0;
+      font-size: 3rem;
     }
   }
 
   & p {
-    font-size: 1.2rem;
     max-width: 600px;
+    font-size: 1.2rem;
     opacity: 0.75;
 
     @media (min-width: 992px) {
@@ -33,15 +33,15 @@
 }
 
 .caption_projects {
-  color: var(--c-regular);
   margin: 1rem 0 3rem 0;
+  color: var(--c-regular);
 }
 
 .caption_news {
   & p {
-    margin: 0;
-    color: var(--c-light);
-    font-family: var(--f-title);
     padding: 2rem 0;
+    margin: 0;
+    font-family: var(--f-title);
+    color: var(--c-light);
   }
 }
