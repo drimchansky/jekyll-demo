@@ -5,22 +5,14 @@ const terser = require('gulp-terser')
 const browserSync = require('browser-sync').create()
 const browserify = require('gulp-browserify')
 const del = require('del')
+const webpack = require('webpack')
+const babelify = require('babelify')
 const rename = require('gulp-rename')
 const imagemin = require('gulp-imagemin')
 
 // Config
 
-const config = {
-  root: 'site/',
-  port: 4000,
-  stylesSrc: 'css/style.css',
-  styleDestName: 'style.css',
-  styleDestPath: 'bundled/',
-  jsSrc: 'js/scripts.js',
-  jsDistPath: 'bundled/',
-  jsDistName: 'scripts.js',
-  imagesPath: 'assets/uploads',
-}
+const config = require('./buildConfig')
 
 // Styles
 
@@ -42,18 +34,15 @@ gulp.task('styles', () => {
 
 // Scripts
 
-gulp.task('scripts', () => {
-  return gulp
-    .src(config.root + config.jsSrc)
-    .pipe(
-      babel({
-        presets: ['@babel/preset-env'],
-      }),
-    )
-    .pipe(browserify())
-    .pipe(terser())
-    .pipe(rename(config.jsDistName))
-    .pipe(gulp.dest(config.root + config.jsDistPath))
+gulp.task('scripts', function(callback) {
+  webpack(require('./webpack.config.js'), function(err, stats) {
+    if (err) {
+      console.log(err.toString())
+    }
+
+    console.log(stats.toString())
+    callback()
+  })
 })
 
 // Images
@@ -99,9 +88,8 @@ gulp.task(
 )
 gulp.task(
   'waitForScripts',
-  gulp.series('scripts', () => {
-    return gulp
-      .src(config.root + config.jsDistPath + config.jsDistName, { allowEmpty: true })
-      .pipe(browserSync.reload())
+  gulp.series('scripts', cb => {
+    browserSync.reload()
+    cb()
   }),
 )
