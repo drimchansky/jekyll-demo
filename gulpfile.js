@@ -1,12 +1,8 @@
 const gulp = require('gulp')
 const postcss = require('gulp-postcss')
-const babel = require('gulp-babel')
-const terser = require('gulp-terser')
 const browserSync = require('browser-sync').create()
-const browserify = require('gulp-browserify')
 const del = require('del')
 const webpack = require('webpack')
-const babelify = require('babelify')
 const rename = require('gulp-rename')
 const imagemin = require('gulp-imagemin')
 
@@ -34,8 +30,8 @@ gulp.task('styles', () => {
 
 // Scripts
 
-gulp.task('scripts', function(callback) {
-  webpack(require('./webpack.config.js'), function(err, stats) {
+gulp.task('scripts', function (callback) {
+  webpack(require('./webpack.config.js'), function (err, stats) {
     if (err) {
       console.log(err.toString())
     }
@@ -68,7 +64,7 @@ gulp.task('clean', () => {
 
 // Watch
 
-gulp.task('watch', function() {
+gulp.task('watch', function () {
   browserSync.init({
     notify: true,
     proxy: `localhost:${config.port}`,
@@ -88,7 +84,7 @@ gulp.task(
 )
 gulp.task(
   'waitForScripts',
-  gulp.series('scripts', cb => {
+  gulp.series('scripts', (cb) => {
     browserSync.reload()
     cb()
   }),
